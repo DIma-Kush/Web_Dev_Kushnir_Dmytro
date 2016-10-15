@@ -1,0 +1,12 @@
+.externalStyle{
+    text-align: right;
+    font-size: 14px;
+    background: rgba(255,0,0,0.3);
+    color: red;
+    padding-right: 1em;
+}
+.imageStylesTypes{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
