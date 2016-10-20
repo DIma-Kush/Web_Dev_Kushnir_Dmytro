@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 210px;
+    width: 837px;
+    margin: 0 auto;
+    outline: red dashed 1px;
+    float: left;
+    margin-left: 285px;
+    margin-top: 20px;
+    padding: 4px;
+    padding: 4px;
+}
+div.wrapper>div.character{
+
+   width: 110px;
+    height: 200px;
+    background: rgba(255,255,0,0.2); margin: 0 ;outline: none;
+     border-radius: 5px;
+   }
+
+.Y_block1{
+    background: blue;
+    width: 20px;
+    height: 200px;
+     position: absolute;
+    margin-left: 80px;
+}
+.Y_block2{
+    background: blue;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 20px;
+    margin-top:180px;
+
+}
+.Y_block3{
+    background: blue;
+    width: 60px;
+    height: 20px;
+       position: absolute;
+    margin-left: 20px;
+    margin-top:70px;
+
+}
+.Y_block4{
+    background: blue;
+    width: 20px;
+    height: 90px;
+    margin-left: 20px;
+      position: absolute;
+
+}
+
+
+.K_block1{
+    background: yellow;
+    width: 20px;
+    height: 200px;
+     position: absolute;
+}
+.K_block2{
+    background: yellow;
+    width: 20px;
+    height: 100px;
+     position: absolute;
+    transform: rotate(45deg);
+    margin-left: 40px; 
+}
+.K_block3{
+    background: yellow;
+    width: 20px;
+    height: 120px;
+     position: absolute;
+    transform: rotate(-35deg);
+    margin-left: 40px; 
+    margin-top: 80px;
+}
+
+
+.R_block1{
+    background: blue;
+    width: 20px;
+    height: 200px;
+     position: absolute;
+    margin-left: 10px;
+}
+.R_block2{
+    background: blue;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 30px;
+    margin-top:80px;
+}
+.R_block3{
+    background: blue;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 30px;
+}
+.R_block4{
+    background: blue;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 50px;
+    margin-top: 40px;
+    transform: rotate(90deg);
+}
+
+
+.A_block1{
+    background: yellow;
+    width: 20px;
+    height: 190px;
+     position: absolute;
+    transform: rotate(12deg);
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.A_block2{
+    background: yellow;
+    width: 20px;
+    height: 190px;
+     position: absolute;
+    transform: rotate(-12deg);
+    margin-left: 70px;
+        margin-top: 10px;
+}
+.A_block3{
+    background: yellow;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 30px;
+    margin-top: 100px;
+    
+}
+
+
+.I_block1{
+    background: blue;
+    width: 20px;
+    height: 120px;
+    margin-top: 80px;
+    margin-left: 45px;
+     position: absolute;
+}
+.I_block2{
+    background: blue;
+    width: 20px;
+    height: 20px;
+      position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+    transform: rotate(90deg);
+}
+.I_block3{
+    background: blue;
+    width: 20px;
+    height: 20px;
+      position: absolute;
+    margin-left: 70px;
+    margin-top: 20px;
+    transform: rotate(90deg);
+}
+
+
+.N_block1{
+    background: yellow;
+    width: 20px;
+    height: 200px;
+     position: absolute;
+}
+.N_block2{
+    background: yellow;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 20px;
+    margin-top: 80px;
+    transform: rotate(180deg);
+}
+.N_block3{
+    background: yellow;
+    width: 20px;
+    height: 200px;
+     position: absolute;
+      margin-left: 80px;
+}
+
+.A2_block1{
+    background: blue;
+    width: 20px;
+    height: 190px;
+     position: absolute;
+    transform: rotate(12deg);
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.A2_block2{
+    background: blue;
+    width: 20px;
+    height: 190px;
+     position: absolute;
+    transform: rotate(-12deg);
+    margin-left: 70px;
+        margin-top: 10px;
+}
+.A2_block3{
+    background: blue;
+    width: 60px;
+    height: 20px;
+      position: absolute;
+    margin-left: 30px;
+    margin-top: 100px;
+    
+}
