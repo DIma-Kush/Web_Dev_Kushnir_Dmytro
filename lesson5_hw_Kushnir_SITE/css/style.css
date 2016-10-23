@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#container{
+
+    height: 800px;
+
+    background-image: url(/img/bg.jpg);
+ 
+}
+header{
+padding: 3%;
+   height: 20%;
+    width: 60%;
+    margin: 0 auto;
+}
+hgroup{
+    height: 45%;
+font-family: Arial;
+    color:white;
+}
+hgroup h1 {
+    font-weight: lighter;
+}
+hgroup h1 span {
+	font-weight:bold
+}
+hgroup h2{
+    font-size:12px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.social_icons_menu{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    margin-left:80%;
+    margin-top: -2%;
+}
+.social_icons_menu li{
+    float: left;
+    margin-left:10px;
+    list-style: none;
+}
+nav{
+    background: rgba(0,0,0,0.4);
+    height: 30%;
+}
+.menu{
+    position: relative;
+    overflow: hidden;
+    margin-left: 3%;
+}
+.menu li{
+    float: left;
+    display: block;
+    padding: 5px;
+    width:80px;
+    text-align: center;
+    margin-top: 10px;
+    list-style: none;
+    }
+.menu a{
+    color:skyblue;
+    text-decoration: none;
+}
+.menu li:hover{
+    color: white;
+ 
+    background-image: url(/img/menu_hover.png);
+    border-radius: 4px;
+}
+/*end of Header*/
+main{
+    background: rgba(50,50,50,1);
+    margin-top: 40%;
+    height: 64%;
+    width: 60%;
+    margin: 0 auto;
+}
+main h2{
+    padding: 2%;
+    color:skyblue;
+}
+.section article{
+   width: 100%;
+}
+.section img {
+    margin: 7px 7px 7px 0;
+    float: left;
+}
+.wrapper{
+    float: left;
+    margin-top: 2%;
+    padding-left: 3%;
+    color:aliceblue;
+    width: 30%;
+}
+.wrapper>h3{
+    padding: 4px;
+   
+}
+.section::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrapper2{
+    float: left;
+    margin-top: 2%;
+    padding-left: 3%;
+    color:aliceblue;
+    width: 40%;
+}
+.bottom_section img {
+    margin: 7px 7px 7px -5px;
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: double 8px black;
+}
+.wrapper2>h2 {
+padding: 10px;
+}
+
+/*end of main*/
+footer{
+        height: 3%;
+      width: 60%; 
+     margin: 0 auto;
+}
+footer p {
+    padding-top: 10px;
+    text-align: center;
+    color:darkorchid;
+}

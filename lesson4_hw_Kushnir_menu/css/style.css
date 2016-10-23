@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    width: 900px;
+    margin: auto;
+    margin-left: 30%
+}
+.menu_item {
+   list-style:none;
+    float: left;
+    margin-right: 10px;
+}
+.menu_link {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color:aquamarine; 
+    padding: 10px 0; 
+    text-align: center;
+    color:darkorange;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 2px 2px black;
+}
+
