@@ -1,14 +1,39 @@
-*{
-    margin:0;
-    padding: 0;
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+
+	vertical-align: baseline;
 }
-
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+        background: url(../img/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
 #container{
+height: 800px;
 
-    height: 800px;
-
-    background-image: url(/img/bg.jpg);
- 
 }
 header{
 padding: 3%;
@@ -69,14 +94,14 @@ nav{
 .menu li:hover{
     color: white;
  
-    background-image: url(/img/menu_hover.png);
+    background-image: url(../img/menu_hover.png);
     border-radius: 4px;
 }
 /*end of Header*/
 main{
     background: rgba(50,50,50,1);
     margin-top: 40%;
-    height: 64%;
+    height: 82%;
     width: 60%;
     margin: 0 auto;
 }
@@ -86,6 +111,13 @@ main h2{
 }
 .section article{
    width: 100%;
+
+}
+article{
+    color:#A9A9A9; 
+}
+article p{
+    color:white; 
 }
 .section img {
     margin: 7px 7px 7px 0;
@@ -93,7 +125,7 @@ main h2{
 }
 .wrapper{
     float: left;
-    margin-top: 2%;
+    margin-top: -4%;
     padding-left: 3%;
     color:aliceblue;
     width: 30%;
@@ -107,6 +139,16 @@ main h2{
     display: block;
     clear: both;
 }
+
+.button {
+   border-bottom: 2px solid black;
+    background-image: url(../img/btn.png);
+color:#A9A9A9; 
+    padding: 4px;
+}
+.button:hover{
+        background-image: url(../img/btn_hover.png);
+}
 .wrapper2{
     float: left;
     margin-top: 2%;
@@ -117,8 +159,7 @@ main h2{
 .bottom_section img {
     margin: 7px 7px 7px -5px;
     float: left;
-    width: 150px;
-    height: 150px;
+
     border: double 8px black;
 }
 .wrapper2>h2 {
@@ -136,3 +177,114 @@ footer p {
     text-align: center;
     color:darkorchid;
 }
+/*--------------Services styles-----------*/
+.services_list{
+    margin-left: 10%;
+   
+}
+.services_list li {
+    list-style-type: none;
+    margin-top: 3%;
+ list-style-image: url('../img/list.png');
+} 
+figure{
+    float: left;
+    margin-left: 3%;
+}
+figure img {
+    margin-left: 5%;
+}
+/*-----------Partners style---------------*/
+.our_benefits{
+    margin-top: -8%;
+margin-left: 20%;
+    width: 25%
+}
+.our_benefits li{
+    padding-top: 2%;
+}
+.partners{
+    margin-top: 4%;
+    width: 45%;
+    background-repeat: no-repeat;
+    height: 33px;
+    cursor: pointer;
+}
+.partners_block{
+    margin-left: 2%; 
+    width: 155%
+    
+/*    Тількі для вирівнювання! блок без розмірів*/
+}
+.flashmo {
+    background-image: url(../img/flashmo.png);
+}
+.templatemo {
+
+    background-image: url(../img/templatemo.png);
+}
+.koflash {
+    background-image: url(../img/koflash.png);
+}
+.webdesignmo {
+    background-image: url(../img/webdesignmo.png);
+}
+.flashmo:hover {
+
+    background-image: url(../img/flashmo_hover.png);
+
+}
+.templatemo:hover {
+
+    background-image: url(../img/templatemo_hover.png);
+}
+.koflash:hover {
+
+    background-image: url(../img/koflash_hover.png);
+
+}
+.webdesignmo:hover {
+ 
+    background-image: url(../img/webdesignmo_hover.png); 
+}
+/*------------About----------------*/
+.about_brief
+{
+    width: 30%;
+    margin-left: 18%;
+    margin-top: -12%;
+}
+/*-----------Registartion------------*/
+label {float:left; padding-right:10px; }
+
+.field {
+    clear:both; 
+    text-align:right; 
+    line-height:25px; 
+    margin-top: 12%; 
+    }
+
+.registration {
+    width: 42%;
+    float:left; 
+    margin-top: 10%;
+   margin-left: 32%;
+    margin-right: 35%;
+    color: azure;
+    border: double 4px;
+    padding: 10px;
+}
+input
+{
+    height: 25px;
+}
+.registration button {
+    margin-top: 10%;
+    margin-left:35%;
+}
+.registration h2 {
+    text-align: center;
+}
+
+
+
