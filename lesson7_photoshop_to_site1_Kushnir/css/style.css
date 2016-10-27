@@ -1,0 +1,172 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+#container{
+    width: 1375px;
+  background: #f9f9f9;
+}
+.content{
+    background: white;
+    width: 1060px;
+    margin: 0 auto;
+    border: 1px solid #c8c8c8;
+}
+/*-----------------Header-------------*/
+header{
+   width:966px ;
+    height: 170px;
+    margin: 0 auto;
+    
+}
+.logo{
+    margin-top: 60px
+}
+.nav{
+    background: #575656;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.nav li{
+    width: 100px;
+    margin-right: 40px;
+    list-style-type: none;
+    text-align: center;
+}
+.nav a{
+color: white;
+text-decoration: none;
+    color: white;;
+        display: block;
+    padding-top: 10px;
+}
+
+.nav li:hover{
+    background: #323232;
+    border-left: 1px #838383 solid;
+    border-right: 1px #838383 solid;
+    
+}
+
+
+/*-----------------Aside-------------*/
+aside{
+    height: 240px;
+    width: 239px;
+        border-left: 1px solid #c8c8c8;
+        border-right: 1px solid #c8c8c8;
+        border-bottom: 1px solid #c8c8c8;
+    margin-left: 46px;
+    margin-top: 38px;
+    /*   for section right positioning */
+    float: left; 
+
+}
+aside li {
+    list-style-type: none;
+    height: 39px;
+    border-top: 1px #c8c8c8 solid;
+
+
+}
+aside a {
+  padding-left: 20px;
+    text-decoration: none;
+    color: #807e7e;
+    display: block;
+    padding-top: 10px;
+        font-size: 12pt;
+}
+aside li:hover{
+    background: #f9f9f9;
+    padding-left: 10px;
+}
+/*-----------------Section-------------*/
+section{
+height: 600px;
+width:678px;
+margin-top: 38px;
+margin-left: 335px;
+}
+section .bike{
+    height: 398px;
+    width: 676px;
+     border: 1px #c8c8c8 solid;
+   
+    background: url(../img/bike.gif) no-repeat center  ;
+}
+section p{
+    margin-top: 20px;
+    padding-left: 24px;
+    padding-top: 14px;
+    padding-right: 25px;
+    font-size: 10pt;
+    line-height: 1.65;
+}
+/*-----------------Footer-------------*/
+footer{
+    width: 966px;
+    height: 40px;
+    margin: 0 auto;
+    background: #e1e1e1;
+    margin-top: 41px;
+    margin-bottom: 60px;
+  
+}
+footer ul{
+      display: flex;
+    flex-direction: row;  
+       height: inherit;
+}
+
+footer li{
+    width: 100px;
+    list-style-type: none;
+    margin-right: 40px;
+       text-align: center;
+ 
+}
+footer a{
+    text-decoration: none;
+    color: #2c2c2c;
+    display: block;
+    padding-top: 10px;
+}
+footer li:hover{
+    text-decoration: underline;
+}
+
+ footer .block5{
+position:absolute;
+margin-left: 775px;
+width: 170px;
+}
+
+ footer .block5:hover{
+     text-decoration: none;
+}
