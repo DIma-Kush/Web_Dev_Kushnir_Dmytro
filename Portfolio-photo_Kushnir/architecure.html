@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider_dots_style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
+</head>
+
+<body scroll="yes" style="opacity:0;transition:2s;">
+    <div class="wrapper">
+        <header class="header">
+            <div class="img-hr"> <img src="img/logo2.PNG" align="middle" alt="Dima-Photography"> </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="architecure.html">Architecture</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </header>
+        <!-- .header-->
+        <div class="scroller">
+                <div class="cycle-slideshow" ; data-cycle-speed="700" ; data-cycle-fx="scrollHorz" ;>
+                <!-- empty element for pager links -->
+                <div class="cycle-pager">
+                </div> 
+                <img src="img/architecture/photo1.jpg" alt="Milano"> 
+                <img src="img/architecture/photo2.jpg " alt="Firenze2"> 
+                <img src="img/architecture/photo3.jpg" alt="Firenze"> 
+                <img src="img/architecture/photo5.jpg" alt="Lviv"> </div>
+        </div>
+        <main class="content architecture">
+            <p><span>Architecture</span></p>
+            <p > Good buildings come from good people, and all problems are solved by good design.
+             </p>
+       <p>@Stephen Gardiner</p>
+        </main>
+        <!-- .content -->
+    </div>
+    <!-- .wrapper -->
+    <footer class="Footer">
+        <p>made by © Dmytro Kushnir, 2016</p>
+    </footer>
+    <!-- .footer -->
+    
+    
+    <script>
+  $(document).ready(function() {    
+    $("body").css("opacity", "1");
+  });
+</script>
+</body>
+
+</html>

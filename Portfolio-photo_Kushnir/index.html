@@ -5,45 +5,64 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider_dots_style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-    <script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script>
+    
 </head>
 
-<body scroll="yes">
+<body scroll="yes" style="opacity:0;transition:2s;">
     <div class="wrapper">
         <header class="header">
             <div class="img-hr"> <img src="img/logo2.PNG" align="middle" alt="Dima-Photography"> </div>
-            <ul>
-                <li><a>Home</a></li>
-                <li><a>Nature</a></li>
-                <li><a>Architecture</a></li>
-                <li><a>Contacts</a></li>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="architecure.html">Architecture</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </header>
         <!-- .header-->
         <div class="scroller">
             <div class="cycle-slideshow" ; data-cycle-speed="700" ; data-cycle-fx="scrollVert" ;>
                 <!-- empty element for pager links -->
-                <div class="cycle-pager"></div> <img src="img/photo1.jpg" alt="photo main 1"> <img src="img/photo2.jpg " alt="photo main 2"> <img src="img/photo3.jpg" alt="photo main 3"> <img src="img/photo4.jpg" alt="one girl"> </div>
+                <div class="cycle-pager">
+                </div> 
+                <img src="img/photo1.jpg" alt="girl in sea"> 
+                <img src="img/photo2.jpg " alt="blondhair girl"> 
+                <img src="img/photo3.jpg" alt="long sea"> 
+                <img src="img/photo4.jpg" alt="brownhair girl"> </div>
         </div>
         <main class="content">
             <p>My name is Dmytro. </p>
             <p> Making photos in Lviv durning autumn. </p>
-            <div id="email_mainpage">
+            <div class="email_mainpage">
                 <p>E-mail: dimakush1@gmail.com</p>
             </div>
             <div class="social_icons_main">
-                <a href="http://www.instagram.com/kushnirdmytro/"> <img src="img/instagram.png" alt="instagram ico"> </a>
-                <a href="http://www.facebook.com/regstarrr"> <img src="img/facebook.png" alt="facebook ico"> </a>
-                <a href="http://plus.google.com/u/1/101016065074868783756"> <img src="img/gmail.png" alt="gmail ico"> </a>
+                <a href="http://www.instagram.com/kushnirdmytro/"  target="_blank"> <img src="img/instagram.png" alt="instagram ico"> </a>
+                <a href="http://www.facebook.com/regstarrr" target="_blank"> <img src="img/facebook.png" alt="facebook ico"> </a>
+                <a href="http://plus.google.com/u/1/101016065074868783756"
+                target="_blank"> <img src="img/gmail.png" alt="gmail ico"> </a>
             </div>
         </main>
         <!-- .content -->
     </div>
     <!-- .wrapper -->
-    <footer class="Footer"> <p>made by © Dmytro Kushnir, 2016</p> </footer>
+    <footer class="Footer">
+        <p>made by © Dmytro Kushnir, 2016</p>
+    </footer>
     <!-- .footer -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+    </script>
+    <script 
+    src="http://malsup.github.com/jquery.cycle2.js">
+    </script>
+    <script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script>
+    
+    <script>
+  $(document).ready(function() {    
+    $("body").css("opacity", "1");
+  });
+</script>
 </body>
 
 </html>

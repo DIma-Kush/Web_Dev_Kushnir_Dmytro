@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider_dots_style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
+</head>
+
+<body scroll="yes" style="opacity:0;transition:2s;">
+    <div class="wrapper">
+        <header class="header">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="architecure.html">Architecture</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </header>
+        <!-- .header-->
+        <figure id="contacts_image">
+                <img src="img/contacts/me.jpg" alt="fire"> 
+        </figure>
+        <article class="brief">
+            <h2>Brief</h2>
+            <p>My name is Dmytro. I am in my fourth year at Lviv Politechnic University mastering computer engineering. This knowledge helps me a lot in my job. Due to the technical knowledge I am working as a programmer after having got qualitative period of probation with one of the largest IT-companies of Ukraine. They say I demonstrated methodical,detail-oriented and thorough approach to all assignments while adhering to compressed timelines. I am able to complete jobs quickly and accurately. I am sure the acquired knowledge and skills will help me to comply with even most exacting clients' requirements so they will describe our collaboration as fruitful and satisfying. I am a photographer.I have got about 7 years of experience in this profession.I process and edit videos making them look much more professionally attractive. Photography is quite an important part of my life.</p>
+        </article>
+        <div class="youtube brief">
+         <h2>My video work</h2>
+        <iframe
+       src="https://www.youtube.com/embed/I6S5zz8fYTQ">
+        </iframe>
+        </div>
+        
+        <div class="googlemap brief">
+          <h2>My current location</h2>
+        <div id='mymap'></div>
+        </div>
+   
+       
+ <div class="registration brief">
+    <h2> Contact with me </h2>
+	<div class="field">
+		<input type="text" placeholder="Name" />
+	</div>
+	<div class="field">
+		<input type="text" placeholder="Email" />
+	</div>
+	<div class="field message">
+	<textarea placeholder="Message"></textarea>
+	</div>
+    <button class="button">Send</button>
+</div>
+       
+        <div class="email_contacts">
+                <p>E-mail: dimakush1@gmail.com</p>
+           
+            <div class="social_icons_contacts">
+                <a href="http://www.instagram.com/kushnirdmytro/"  target="_blank"> <img src="img/instagram.png" alt="instagram ico"> </a>
+                <a href="http://www.facebook.com/regstarrr" target="_blank"> <img src="img/facebook.png" alt="facebook ico"> </a>
+                <a href="http://plus.google.com/u/1/101016065074868783756"
+                target="_blank"> <img src="img/gmail.png" alt="gmail ico"> </a>
+            </div>
+        </div>
+        <!-- .content -->
+</div>
+    <!-- .wrapper -->
+    <footer class="Footer">
+        <p>made by © Dmytro Kushnir, 2016</p>
+    </footer>
+    <!-- .footer -->
+    
+    
+    <script>
+  $(document).ready(function() {    
+    $("body").css("opacity", "1");
+  });
+</script>
+ <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
