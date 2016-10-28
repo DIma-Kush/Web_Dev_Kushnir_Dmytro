@@ -24,6 +24,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+body{
+   font-family: 'Open Sans', sans-serif; 
+        font-size: 13px;
+}
 
 #container{
     width: 1375px;
@@ -59,11 +63,13 @@ header{
     text-align: center;
 }
 .nav a{
+    height: inherit;
 color: white;
 text-decoration: none;
     color: white;;
         display: block;
     padding-top: 10px;
+     font-size: 15px;
 }
 
 .nav li:hover{
@@ -99,8 +105,8 @@ aside a {
     text-decoration: none;
     color: #807e7e;
     display: block;
-    padding-top: 10px;
-        font-size: 12pt;
+    padding-top: 8px;
+       font-size: 13px;
 }
 aside li:hover{
     background: #f9f9f9;
@@ -125,8 +131,8 @@ section p{
     padding-left: 24px;
     padding-top: 14px;
     padding-right: 25px;
-    font-size: 10pt;
-    line-height: 1.65;
+  font-size: 11.5px;
+    line-height: 1.9;
 }
 /*-----------------Footer-------------*/
 footer{
