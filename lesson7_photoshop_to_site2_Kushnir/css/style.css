@@ -1,0 +1,200 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/*----------------CSS RESET END----------------*/
+html{
+      background: url(../img/background.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;  
+     font-family: 'Tahoma'; 
+    color: white;;
+}
+#container{
+  width: 860px;
+    margin: 0 auto;
+  
+}
+/*--------------header----------------*/
+.header{
+    margin-top: 13.5%;
+    width: inherit;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+ .logo{
+
+    margin-left: 2.5%;
+    width: 287px;
+    height: 93px;
+}
+.logo h1{
+font-size: 11px;
+    
+    margin-left: 80px;
+}
+.palm{
+    bottom: 75px;
+    right: 300px;
+  position: relative;
+}
+.contacts {
+margin-top:19px;
+    margin-right: 30px;
+    font-size: 10.5px;
+}
+.contacts span{
+font-size: 9px;
+}
+/*---------------main----------------*/
+.main{
+    margin: 0 auto;
+    width: 830px;
+    display: flex;
+    
+}
+.main .col1{
+ width: inherit;
+ display: flex;
+ flex-direction: column;
+justify-content: center;
+}
+.main .col2{
+ width: inherit;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.main .col3{
+ width: inherit;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.border_image{
+    margin: 3px;
+       margin-bottom: 35px;
+}
+.border_image:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.border_image img{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-image: url(../img/ramka.png) ;
+}
+.border_image figcaption{
+
+    position: relative;
+    bottom:3px;
+ 
+    text-align: center;
+}
+/*-------------footer-------------*/
+.footer{
+    margin-top: 15%;
+    margin-bottom: 2%;
+}
+.footer p{
+    text-align: center;
+    font-size: 10.5px;
+    padding-left: 12px;
+}
+/*---------for_820_resolution ---------*/
+
+@media screen and (max-width:820px){
+    #container{
+        width: 700px;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+          flex-wrap: wrap;
+        height: 80px
+}
+    .palm{
+        right: 130px;
+        bottom: 60px;
+    }
+    .main{
+        margin: 0 auto;
+      width: 700px;
+           
+        justify-content:space-around;
+         flex-direction: column;
+      cursor: pointer;
+}
+    .main .col1{
+      flex-direction: row;
+}
+    .main .col2{
+        flex-direction: row;
+}
+       .main .col3{
+        flex-direction: row;
+}
+    
+}
+/*---------for_640_resolution ---------*/
+
+@media screen and (max-width:640px){
+#container{
+        width: 400px;
+    }
+    .header{
+        height: 100px;   
+} 
+    .contacts{
+       position: relative;
+        bottom:50px;
+        right: 40px;
+    }
+    .palm{
+        left: 120px;
+        bottom: 150px;
+    }
+    .main{
+       
+      width: 400px;
+         flex-direction: column;
+      
+}
+    .main .col1{
+      flex-direction: column;
+        align-items: center;
+}
+    .main .col2{
+        flex-direction: column;
+        align-items: center;
+}
+       .main .col3{
+        flex-direction: column;
+           align-items: center; 
+        
+}
+}

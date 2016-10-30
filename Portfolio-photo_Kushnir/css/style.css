@@ -283,6 +283,9 @@ margin-bottom: 50px;
     margin-left: 73%;
     cursor: pointer
 }
+.registration button:hover{
+    background: #391d5d;
+}
 .registration .message textarea{
     height: 100px;
 
