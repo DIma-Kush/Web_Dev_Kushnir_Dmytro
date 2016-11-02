@@ -32,12 +32,16 @@ body{
 #container{
     width: 1375px;
   background: #f9f9f9;
+
 }
 .content{
     background: white;
     width: 1060px;
     margin: 0 auto;
     border: 1px solid #c8c8c8;
+      -webkit-box-shadow: 0px 0px 9px 1px rgba(130,126,130,1);
+-moz-box-shadow: 0px 0px 9px 1px rgba(130,126,130,1);
+box-shadow: 0px 0px 9px 1px rgba(130,126,130,1);
 }
 /*-----------------Header-------------*/
 header{
