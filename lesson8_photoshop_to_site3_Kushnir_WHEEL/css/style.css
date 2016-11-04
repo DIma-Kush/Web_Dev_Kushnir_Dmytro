@@ -113,15 +113,15 @@
     color: darkgrey;
     text-decoration: none;
 }
-.link2{  
+.nav_link__link2{  
    padding-left: 12px;
    padding-right: 10px;
 }
-.link4{
+.nav_link__link4{
    padding-left: 8px;
    padding-right: 10px;
 }
-.link5{
+.nav_link__link5{
    padding-left: 14px;
    padding-right: 12px;
 }
@@ -178,7 +178,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
     margin-left: 5px;
     height: 130px;
     width: 410px;
+    display: flex;
 }
+.form{
+    margin: 12px 10px;
+    width: 260px;
+    height: 90px;
+    background-color: aquamarine;
+}
+label {float:left; padding-right:10px; }
+
+.field {
+    clear:both; 
+    text-align:right; 
+    line-height:25px; 
+    margin-top: 12%; 
+    }
 .middle_section{
     margin-left: 15px;
     height: 130px;
@@ -270,7 +285,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
     border: 1px solid grey;
     border-radius: 25px 25px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-    margin-top: 2px;
+    margin-top: 4px;
     margin-bottom: 11px;
 }
 
@@ -302,14 +317,13 @@ img[alt="circle"] {
     color: #114165;
     border: 1px solid grey;
     border-radius: 25px 25px;
-    margin-top: 6px;
+    margin-top: 7px;
 }
 
 li.aside_m_list a {
     color: #114165;
      line-height: 25px;
     text-decoration: none;
- 
     display: block;
     padding-top: 4px;
 }
@@ -337,7 +351,9 @@ li.aside_m_list a {
     color: #0c3256;
     font-family: Arial, sans-serif;
     font-style: italic;
-    font-weight: 800;
+    font-weight: bold;
+    font-size: 15px;
+
 }
 
 
@@ -360,9 +376,12 @@ li.aside_m_list a {
     height: 25px;
     margin-left: 8px;
 }
+.katalog_products_right{
+    padding-left: 5px;
+}
 .list_aside_m_list_right2{
     margin-top: 13px;
-    margin-left: 19px;
+    margin-left: 22px;
     width: 135px;
 }
 .aside_button{
@@ -396,7 +415,7 @@ text-align: center;
 .footer_menu {
     width: auto;
     height: 50px;
-    padding-left: 289px;
+    padding-left: 293px;
     padding-top: 10px;
     background-color: #213A4D;
     font-size: 12px;

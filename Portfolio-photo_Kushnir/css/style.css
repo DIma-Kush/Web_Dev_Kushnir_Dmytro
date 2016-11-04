@@ -96,8 +96,9 @@ font-size: 20px;
 .menu a{
     text-decoration: none;
 }
- .menu li:visited { text-decoration: none; } 
-    .menu li:active { text-decoration: none; }
+.menu a:visited { text-decoration: none; color: black;} 
+.menu a:active { text-decoration: none; color: black;}
+.menu a:link{ text-decoration: none; color: black;}
 /* Middle
 -----------------------------------------------------------------------------*/
 .scroller{
@@ -190,13 +191,14 @@ height: 40px;
     overflow:hidden;
     z-index: 1; 
     background-size: cover;
-    width: auto;   
+    width: 70%;
+    margin: 0 auto;
 }
 
 #contacts_image img { 
 width: 1000px;
     margin-top: 1%;
-margin-left: 14%;
+
 border: double 4px black;
 margin-bottom: 50px;
 }
