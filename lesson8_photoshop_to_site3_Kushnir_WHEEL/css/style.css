@@ -69,7 +69,7 @@
 }
 .forgot_password_label{
     font-size: 12px;
-    margin-left: 15px;
+    margin-left: 14px;
     color:darkgrey;
     text-decoration: underline
 }
@@ -100,7 +100,7 @@
     padding-left: 125px;
     font-family: Lucida Sans Unicode;
     font-size: 14px;
-  
+
 }
 .nav_link{
     margin-top: 3px;
@@ -112,6 +112,7 @@
     padding-top: 8px;
     color: darkgrey;
     text-decoration: none;
+    
 }
 .nav_link__link2{  
    padding-left: 12px;
@@ -171,34 +172,99 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
 }
 .search_part{
    margin-top: 5px;
-   border: 2px solid  grey;
+   border: 1px solid  grey;
    border-radius: 15px;
+     box-shadow: 3px 3px 8px 0px rgba(50, 50, 51, 0.45);
 }
+.form{
+    margin: 14px 10px;
+    width: 260px;
+    height: 90px;
+
+   
+}
+.top_article{
+    height: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.search__article{
+    font-family: Arial;
+    margin-right: 70px;
+    font-size: 10px;
+    color: #154468;
+    font-weight: 800;
+}
+.search__article-center{
+    font-size: 12px;
+}
+
+.label_and_select{
+    display: flex;
+    justify-content: space-between;
+}
+.form__selection{
+    margin-top: 5px;
+     border-top: 1px solid grey;
+     border-left: 1px solid grey;
+    margin-left: 4px;
+     appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    background: url(../img/search/arrow.png) no-repeat right ;
+}
+.form__selection_big{
+    width: 102px;
+}
+.form__selection_middle{
+    width: 60px;
+    margin-right: 42px;
+}
+.search__search{
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 340px;
+        font-family: Arial italic;
+ font-size: 16px;
+    text-decoration: underline;
+        color: #154468;
+}
+/*-------------search__left_section----------------*/
 .left_section{
     margin-left: 5px;
     height: 130px;
     width: 410px;
     display: flex;
 }
-.form{
-    margin: 12px 10px;
-    width: 260px;
-    height: 90px;
-    background-color: aquamarine;
-}
-label {float:left; padding-right:10px; }
 
-.field {
-    clear:both; 
-    text-align:right; 
-    line-height:25px; 
-    margin-top: 12%; 
-    }
+.form__label{
+    color: black;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.label__span_lighter{
+color: gray;    
+}
+
+.form__label1{
+    flex-direction: row;
+    align-items:flex-end;
+}
+
+/*-----------Search__middle section-----------------*/
 .middle_section{
     margin-left: 15px;
     height: 130px;
     width: 190px;
 }
+
+/*-----------Search__right section-----------------*/
 .right_section{
     margin-left: 10px;
     height: 130px;
