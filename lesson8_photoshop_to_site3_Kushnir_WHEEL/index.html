@@ -42,9 +42,9 @@
         <section class="search">
            <div class="search_part left_section">
             <article class="top_article">
-                <div class="search__article search__article1">Диски:</div>
+                <div class="search__article ">Диски:</div>
                 <div class="search__article search__article-center">Поиск по автомобилю:</div>
-                <div class="search__article search__article3">Шины:</div>
+                <div class="search__article ">Шины:</div>
             </article>
              <form class="form">
             
@@ -109,8 +109,98 @@
              </form> 
              <aricle class="search__search">поиск...</aricle>              
             </div>
-            <div class="search_part middle_section"></div>
-            <div class="search_part right_section"></div>
+            
+<!--            -->
+            <div class="search_part middle_section">
+                <article class="top_article ">
+                <div class="search__article search_article-middle">Поиск шин:</div>
+            <form class="form form__middle">
+                  <div class="label_and_select label_and_select__middle">
+                <label for="Mark" class="form__label form__label_middle">Размер</label>
+                 <select class=" form__selection form__select_middle_form" name="Mark"  id="Mark">
+                     <option value="115">115</option>
+                 </select>
+                 <p>/</p>
+                 <select class=" form__selection form__select_middle_form" name="Mark"  id="Mark">
+                     <option value=""></option>
+                 </select>
+                </div>
+                  
+            <div class="label_and_select label_and_select__middle">
+                <label for="Mark" class="form__label form__label_middle label__second_row">R</label>
+                 <select class=" form__selection form__select_middle_form select__second_row" name="Mark"  id="Mark">
+                     <option value="12">12</option>
+                 </select>
+                </div>
+   
+               <div class="middle__checkboxes"> 
+                    <label class="label__third_row" for="season">Сезон</label> 
+               <div>
+            <input type="checkbox" id="season" >
+            <label for="season"><span></span>Лето</label>
+            </div>
+                 <div>
+            <input type="checkbox" id="season" >
+            <label for="season"><span></span>Зима</label>
+            </div>
+                 <div>
+            <input type="checkbox" id="season" >
+            <label for="season"><span></span>Всесез</label>
+            </div>
+                </div>
+            </form>
+           <aricle class="search__search search_middle">поиск...</aricle>     
+            </article>
+            </div>
+            
+<!--            -->
+            <div class="search_part right_section">
+                 <article class="top_article ">
+                <div class="search__article search_article-middle">Поиск дисков:</div>
+            <form class="form form__right">
+                    <div class="label_and_select">
+                <label for="Mark" class="form__label form__label1 form__label_right">Диаметр &nbsp; <span class="label__span_lighter">диска:</span></label>
+                 <select class=" form__selection form__selection_right" name="Mark"  id="Mark">
+                     <option value="14">14</option>
+                 </select>
+                </div> 
+                 
+                <div class="label_and_select">
+                <label for="Model" class="form__label form__label_right">Количество <br><span class="label__span_lighter">крепёжных отверстий:</span></label>
+                  <select class="form__selection form__selection_right select__right_second_row" name="Model" id="Model">
+                     <option value="3">3</option>
+                 </select>
+                 </div>
+                 
+                <div class="label_and_select">
+                <label for="Year" class="form__label form__label_right">Диаметр <br> <span class="label__span_lighter">расположения крепёжных отверстий</span></label>
+                   <select class="form__selection form__selection_right" name="Year" id="Year">
+                     <option value="12">12</option>
+                 </select>
+                </div>
+                
+            </form>
+           <figure class="search__right_border">
+               <img src="img/search/border.png" alt="border">
+           </figure>
+            </article>
+            <form class="search__right_rightside">
+                <div class="label_and_select_right">
+                    <label for="model">ДЦО <br><span class="label__span_lighter">(диаметр центрального отверстия)</span></label>
+                    <select class="form__selection form__selection_right right--modify " name="model" id="model">
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="label_and_select_right">
+                    <label for="model">ЕТ <br><span class="label__span_lighter">(вылет диска</span></label>
+                    <select class="form__selection form__selection_right right--modify " name="model" id="model">
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </form>
+             <aricle class="search__search search_right">поиск...</aricle>     
+            </div>
+<!--           -->
         </section>
         <main class="main">
             <aside class="sidebar sidebar_left">

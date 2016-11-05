@@ -176,13 +176,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
    border-radius: 15px;
      box-shadow: 3px 3px 8px 0px rgba(50, 50, 51, 0.45);
 }
-.form{
-    margin: 14px 10px;
-    width: 260px;
-    height: 90px;
 
-   
-}
 .top_article{
     height: 20px;
     position: absolute;
@@ -205,16 +199,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
     display: flex;
     justify-content: space-between;
 }
+
+.form{
+    margin: 14px 10px;
+    width: 260px;
+    height: 90px;  
+}
+
 .form__selection{
     margin-top: 5px;
+    border: 0px;
      border-top: 1px solid grey;
      border-left: 1px solid grey;
+    
     margin-left: 4px;
      appearance:none;
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     background: url(../img/search/arrow.png) no-repeat right ;
 }
+
 .form__selection_big{
     width: 102px;
 }
@@ -246,6 +250,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', end
     flex-direction: column;
     justify-content: center;
     padding-left: 5px;
+    line-height: 0.8em;
 }
 
 .label__span_lighter{
@@ -254,7 +259,7 @@ color: gray;
 
 .form__label1{
     flex-direction: row;
-    align-items:flex-end;
+ align-self:flex-end;
 }
 
 /*-----------Search__middle section-----------------*/
@@ -263,12 +268,113 @@ color: gray;
     height: 130px;
     width: 190px;
 }
-
+.search_article-middle{
+    font-size: 12px;
+    margin-left: -10px;
+}
+.form__middle{
+    width: 180px;
+    margin-left: -155px;
+}
+.form__middle p{
+    position: absolute;
+    left:95px;
+    top:18px;
+}
+.form__select_middle_form{
+    width: 50px;
+    height: 16px;
+    font-size: 11px;
+    margin-right: 8px;
+}
+.form__label_middle{
+    display: flex;
+    justify-content: flex-end;
+    margin-left:5px;
+`}
+.label__second_row{
+    margin-left: 38px;
+    font-size: 12px;
+}
+.select__second_row{
+    margin-top: 10px;
+    margin-right: 80px;
+}
+.middle__checkboxes{
+    font-size: 10.5px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.middle__checkboxes input{
+   margin-top: -1px;
+    margin-right: -2px;
+}
+.label__third_row{
+    position: absolute;
+    left:-4px;
+    top:67px;
+}
+.search_middle{
+    margin-left: 103px;
+}
 /*-----------Search__right section-----------------*/
 .right_section{
     margin-left: 10px;
     height: 130px;
     width: 265px;
+}
+.form__right{
+    width: 200px;
+    margin-left: -170px;
+    margin-top: 8px;
+}
+.form__label_right{
+    width: 80px;
+    position: absolute;
+    margin-top: 1px;
+    right: 122px;
+    font-size: 11px;
+    line-height: 0.9em;
+}
+.form__selection_right{
+    margin-top: 11px;
+    width: 60px;
+    margin-left: 98px;
+}
+.select__right_second_row{
+ width: 50px;  
+    margin-bottom: 5px;
+}
+.search__right_border{
+    position: absolute;
+    right:43px;
+}
+.search__right_rightside {
+    width: 90px;
+    height: 105px;
+    margin-left: 178px;
+    margin-top: 4px;
+    font-size: 10px;
+}
+.search__right_rightside label{
+   margin-left: 10px;
+    text-align: center;
+}
+.search__right_rightside span{
+    display: block;
+    font-size: 9px;
+   margin-left: -16px;
+}
+.right--modify{
+    width: 58px;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-bottom: 8px
+}
+.search_right{
+    position: absolute;
+    top: 345px;
+    right: 567px
 }
 /*---------------main---------------*/
 
@@ -454,7 +560,7 @@ li.aside_m_list a {
     margin-top: 20px;
     margin-left: 29px;
     background-image: url(../img/aside/button.png) ;
-    width: 83px;
+    width: 82px;
     height: 28px;
     color: white;
     font-family: Arial;
