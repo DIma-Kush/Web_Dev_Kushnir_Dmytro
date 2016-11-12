@@ -11,8 +11,7 @@ body{
 #container{
     width: 960px;
     margin: 0 auto;
-    position: relative;
-    left: 60px;
+    
 }
 @font-face{
     font-family: LeagueGothic;
