@@ -5,14 +5,31 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset_style.css"> </head>
-
+    <link rel="stylesheet" href="css/reset_style.css"> 
+    <link rel="stylesheet" href="css/from768_to_960_style.css">
+    <link rel="stylesheet" href="css/from480_to_768_style.css">
+    <link rel="stylesheet" href="css/from320_to_480_style.css">
+</head>
 <body>
     <div id="container">
         <header class="header">
+           
             <div class="menu_article">
                 <h1 class="title">PINGBULL<span>ER</span></h1>
-                <nav class="menu"> <a href="#" class="menu__item"><span>HOME</span></a> <a href="#" class="menu__item"><span>ABOUT</span></a> <a href="#" class="menu__item"><span>BLOG</span></a> <a href="#" class="menu__item"><span>PRODUCTS</span></a> <a href="#" class="menu__item"><span>LOREM IPSUM</span></a> <a href="#" class="menu__item"><span>DOLOR SIT AMET</span></a> </nav>
+                <div class="dropdown">
+                <button class="dropbtn">HOME</button>
+                <nav class="menu dropdown-content"> 
+                    <a href="#" class="menu__item" id="home"><span>HOME</span></a> 
+                
+                    <a href="#" class="menu__item"><span>ABOUT</span></a> <a href="#" class="menu__item"><span>BLOG</span></a> 
+                
+                    <a href="#" class="menu__item"><span>PRODUCTS</span></a>
+                
+                    <a href="#" class="menu__item"><span>LOREM IPSUM</span></a> 
+                    
+                    <a href="#" class="menu__item"><span>DOLOR SIT AMET</span></a> 
+                </nav>
+            </div>
             </div>
         </header>
         <section class="slider">
@@ -24,7 +41,8 @@
                     <h2>IT WILL MAKE OF YOUR DREAMS COME TRUE</h2>
                     <p>Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
                 </div>
-                <figure class="smartphone"> <img src="img/960/phone.png" alt="iphone6"> </figure>
+                <figure class="smartphone_960"> <img src="img/960/phone.png" alt="iphone6"> </figure>
+                <figure class="smartphone_480"> <img src="img/480/iphone.png" alt="iphone6"> </figure>
                 <figure class="navigation_dots"> <img src="img/960/navigation.png" alt="navigation_dots"> </figure>
             </article>
         </section>
@@ -71,7 +89,10 @@
                 </div> <a href="#">READ MORE HERE</a> </article>
         </main>
         <section class="section_partners">
-            <figure class="partners"> <img src="img/960/logos.png" alt="partners"> </figure>
+            <figure class="partners_960"> <img src="img/960/logos.png" alt="partners"> </figure>
+            <figure class="partners_768"> <img src="img/768/logos.png" alt="partners"> </figure>
+            <figure class="partners_480"> <img src="img/480/logos.png" alt="partners"> </figure>
+             <figure class="partners_320"> <img src="img/320/logos.png" alt="partners"> </figure>
         </section>
         <section class="credentials">
             <article class="credentials__article">
@@ -89,7 +110,7 @@
             </article>
         </section>
         <footer class="footer">
-            <nav class="menu"> <a href="#" class="menu__item footer__menu__item"><span>HOME</span></a> <a href="#" class="menu__item footer__menu__item"><span>ABOUT</span></a> <a href="#" class="menu__item footer__menu__item"><span>BLOG</span></a> <a href="#" class="menu__item footer__menu__item" ><span>PRODUCTS</span></a> <a href="#" class="menu__item footer__menu__item"><span>LOREM IPSUM</span></a> <a href="#" class="menu__item footer__menu__item"><span>DOLOR SIT AMET</span></a> </nav>
+            <nav class="menu" id="footer_menu"> <a href="#" class="menu__item footer__menu__item"><span>HOME</span></a> <a href="#" class="menu__item footer__menu__item"><span>ABOUT</span></a> <a href="#" class="menu__item footer__menu__item"><span>BLOG</span></a> <a href="#" class="menu__item footer__menu__item" ><span>PRODUCTS</span></a> <a href="#" class="menu__item footer__menu__item"><span>LOREM IPSUM</span></a> <a href="#" class="menu__item footer__menu__item"><span>DOLOR SIT AMET</span></a> </nav>
             <p>designed by <span>Pingbull AS</span></p>
         </footer>
     </div>

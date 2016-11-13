@@ -11,7 +11,8 @@ body{
 #container{
     width: 960px;
     margin: 0 auto;
-    
+    position: relative;
+    left:60px;
 }
 @font-face{
     font-family: LeagueGothic;
@@ -33,6 +34,9 @@ height: 275px;
     display: flex;
     justify-content: center;
     padding-top: 65px;
+}
+.dropbtn{
+    display: none;
 }
  .title {
     position: relative;
@@ -82,17 +86,19 @@ text-shadow: 2px 2px 1px rgba(150, 150, 150, 0.2);
     width: 960px;    
     margin: 0 auto;
 }
-.smartphone{
+.smartphone_960{
     margin-left: 540px;
    width: 400px;
     text-align: right;
     box-sizing: border-box;
     padding-right: 75px;
 }
-.smartphone img{
+.smartphone_960 img{
     margin-top: -323px;
 }
-
+.smartphone_480{
+    display: none
+}
 .arrow{
     width: 30px;
     position: relative;
@@ -297,6 +303,15 @@ margin-top: 5px;
     margin-top:9%;
     text-align: center;
 }
+.section_partners .partners_768{ 
+    display: none;
+}
+.section_partners .partners_480{  
+    display: none;
+}   
+.partners_320{  
+    display: none;
+}  
 /*-------"section_additional_information-----*/
 .credentials{
     width: 960px;
