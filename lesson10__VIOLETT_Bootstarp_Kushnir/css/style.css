@@ -1,0 +1,10 @@
+.container-fluid{
+/* background: url(../img/960/background.png) no-repeat left;*/
+	height: 2306px;
+}
+
+.row header{
+	/*backkground-color: aqua;*/
+	height: 300px;
+	border: 2px solid black;
+}
