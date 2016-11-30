@@ -53,3 +53,55 @@ divSecret.addEventListener('mouseover', changeDiv.bind(null,'yellow','6px double
 divSecret.addEventListener('click', changeText.bind(null,'А я тобі не скажу','white'));
 divSecret.addEventListener('click', changeDiv.bind(null,'black','6px double yellow'));
 
+////////////////////////ЗАВДАННЯ 3/////////////////////
+
+function maxThreeValue(a,b,c){
+	var temp = 0;
+	 (a > b) ? temp = a : temp = b;
+	 return (temp > c) ? temp :  c;
+};
+function maxFourValue(a,b,c,d){
+	// тут a та c виступають у ролі проміжних значень
+	(a > b) ? a : a = b;
+	(c > d) ? c : c = d;
+	return (a > c) ? a : c;
+};
+var a = maxThreeValue(-5,-1,-2);
+//alert(a);
+var b = maxFourValue(-2,-1,244,-4);
+//alert(b);
+
+////////////////////////ЗАВДАННЯ 4/////////////////////
+
+function geomFunc1(count,ratio){
+	var sum=0;
+	var string = "";
+	var value = 1;
+	for (var i=0; i<count; i++){
+		string += value + " ";
+		sum += value;
+		value *= ratio;
+	}
+	return `${string} = ${sum}`;
+}
+function geomFunc2(count,ratio){
+	var first = 1; 
+	return first * ((1 - Math.pow(ratio,count))/(1 - ratio)); 
+}
+
+function geomRec(count,ratio){
+	if(count < 2)
+		return 1;
+	else{
+		var geosum = Math.pow(ratio,(count-1));
+	geosum += geomRec((count-1),ratio);
+	return geosum;
+	}
+}
+
+var func1 =geomFunc1(4,3);
+document.write(`<br> ${func1}`);
+var func2 = geomFunc2(4,3);
+document.write(`<br> ${func2}`);
+var func3 = geomRec(4,3);
+document.write(`<br> ${func3}`);
