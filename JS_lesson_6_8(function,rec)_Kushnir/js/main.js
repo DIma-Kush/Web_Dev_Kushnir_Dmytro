@@ -105,3 +105,20 @@ var func2 = geomFunc2(4,3);
 document.write(`<br> ${func2}`);
 var func3 = geomRec(4,3);
 document.write(`<br> ${func3}`);
+
+////////////////////////ЗАВДАННЯ 5/////////////////////
+function simpleDigits(a,b){
+	var string = "";
+	label:
+	for( var i = a; i < b; i++){
+		for (var j = 2; j < i; j++){
+			if(i % j == 0) continue label; // чи ділиться i на число до нього(j). Якщо так,воно нам не підходить, тому йдем по мітці і берем наступне
+		}
+		string += i + " ";
+	}
+	return string;
+}
+var a = parseInt(prompt('Enter a'));
+var b = parseInt(prompt('Enter b'));
+var func4 = simpleDigits(a,b);
+alert(func4);
