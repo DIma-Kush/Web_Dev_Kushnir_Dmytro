@@ -19,7 +19,7 @@ if(document.contains(document.getElementById("tank")))
 		}	
 }
 
-
+// глобальні змінні для 
 var tank;
 var tableText;
 var tableImage;
@@ -137,7 +137,34 @@ function  imageFunc(){
 	var target  = e.target;
 	if(target.tagName != 'DIV') return;
 	 document.body.style.backgroundImage = target.style.backgroundImage;
-		
+	 //document.body.style.backgroundRepeat = 'cover'; // для більших ображень
 		});
-	
 };
+
+///////////////Migrate text////////////////////////
+//тут ми використаємо подію onclick всередині javascript
+var migrateText = sel('.selectMigrate');
+var form = document.forms.formMigrate;
+migrateText.onclick = function(){
+	//sel('.formMigrate').style.display = "block";
+	form.style.display = "block";
+};
+
+form[1].addEventListener('click',function(){
+	
+	
+	if( form[0].value !== ""){
+	form[2].value = form[0].value;
+	form[0].value = "";
+	}
+//	else if(form[2].value !== ""){
+//	form[0].value = form[2].value;
+//	form[2].value = "";
+//	}
+});
+
+
+
+
+
+
