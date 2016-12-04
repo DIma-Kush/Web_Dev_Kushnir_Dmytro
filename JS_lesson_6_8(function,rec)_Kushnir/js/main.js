@@ -118,7 +118,25 @@ function simpleDigits(a,b){
 	}
 	return string;
 }
-var a = parseInt(prompt('Enter a'));
-var b = parseInt(prompt('Enter b'));
+//var a = parseInt(prompt('Enter a','10'));
+//var b = parseInt(prompt('Enter b','2'));
 var func4 = simpleDigits(a,b);
-alert(func4);
+//alert(func4);
+
+////////////////////////////ДОДАТКОВЕ ЗАВАННЯ1/////////////////////////
+//var block = document.body.getElementsByClassName('block');
+var block = document.querySelectorAll('.block');
+var colors = [];
+console.log(block.length);
+for(var i =0 ; i< block.length; i++){
+	var answer = ('Виберіть колір','red');
+	colors[i] = answer;
+	block[i].style.background = colors[i];
+}
+////////////////////////////ДОДАТКОВЕ ЗАВАННЯ2/////////////////////////
+var countLi = getE('.colors');
+var liColors = [];
+for(var i = 0; i < countLi.children.length; i++){
+	liColors[i] = countLi.children[i].textContent;
+	countLi.children[i].style.background = liColors[i];
+}
