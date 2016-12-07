@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>KR task1</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset_style.css"> </head>
+
+<body>
+	<main class="container">
+		<section class="edit_show show">
+			<article class="show__article">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+			</article>
+		</section>
+		<section class="operate">
+			<form action="#" name="operate">
+				<input type="button" class="buttons" value="edit" name="editBtn">
+				<input type="button" class="buttons" value="style" name="styleBtn"> </form>
+		</section>
+		<section class="edit_show edit">
+			<article class="edit__article">
+				<form action="#" name="edit">
+					<textarea class="form__textarea" name="textarea"></textarea>
+					<div class="edit__btns">
+						<input type="button" class="buttons" value="Save" name="saveBtn">
+						<input type="button" class="buttons" value="Add" name="addBtn"> </div>
+				</form>
+			</article>
+			<article class="edit__article_style">
+				<!--         !!!! SIZE TEXT     -->
+				<form name="radio" class="style__text"> Text size:
+					<label>
+						<input type="radio" name="text__radio" value="12pt">12px</label>
+					<label>
+						<input type="radio" name="text__radio" value="14pt">14px</label>
+					<label>
+						<input type="radio" name="text__radio" value="16pt">16px</label>
+					<label>
+						<input type="radio" name="text__radio" value="18pt">18px</label>
+					<label>
+						<input type="radio" name="text__radio" value="20pt">20px</label>
+				</form>
+				<!--         !!!! SIZE TEXT ---END     -->
+				<!--              !!!! HEADSET  -->
+				<form name="fontFamily" class="style__headset"> Font family:
+					<select name="list">
+						<option selected value="Times New Roman">Times New Roman</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Arial">Arial</option>
+						<option value="Verdana">Verdana</option>
+					</select>
+				</form>
+				<!--         !!!! HEADSET --END -->
+				<!--                COLOR TEXT AND BG-->
+				<form name="color" class='style__color'>
+					<input type="button" value="Text color" name="colorBtn" onClick='colorFunc(999);' class="buttons" id="btnClr">
+					<input type="button" value="Bg color" name="bgBtn" onClick='colorFunc(888);' class="buttons" id="btnBg"> </form>
+				<!--         COLOR TEXT AND BG --END -->
+				<!--           Typeface text - Накреслення-->
+				<form name="typeface" class="style__typeface">
+					<label>
+						<input type="checkbox" name="bolt"> Bolt</label>
+					<label>
+						<input type="checkbox" name="italic"> Cursive</label>
+					<label>
+						<input type="checkbox" name="underline"> Underline</label>
+				</form>
+				<!--     Typeface text - Накреслення --END-->
+				 </article>
+		</section>
+		
+		<!--     !!!!    BOX THIRD  -->
+        <section class="edit__article_add">
+            <form name="form__choice" class="form__retreat">
+                <h1 style="text-align:center">Select your option:</h1>
+                <label>
+                    <input type="radio" name="choice" value="table" class="table__choice"> Table </label>
+                <label>
+                    <input type="radio" name="choice" value="list" class="list__choice"> List </label>
+            </form>
+            
+<!--          TABLE CREATE  -->
+           <div class="table__create_box">
+            <form name="table__create">
+              
+               <div class="form__retreat_rows">
+                <label> Введіть кількість рядків таблиці:
+                    <input type="text" name="rows" value="" class="view__input"> </label>
+                </div>
+                <label> Введіть кількість стовпців таблиці:
+                    <input type="text" name="colums" value="" class="view__input"> </label>
+                    
+                <h2 class="table__title">Stylize the table:</h2>
+                
+                <label> Введіть ширину комірки таблиці:
+                    <input type="text" name="cell__width" value="" class="view__input"> </label>
+                    
+                <div class="form__retreat_cellH">
+                <label> Введіть висоту комірки таблиці:
+                    <input type="text" name="cell__heigth" value="" class="view__input"> </label>
+                </div>
+                <label> Товщина:
+                    <input type="text" name="width" value="" class="view__input"> </label>
+                <label> Тип лінії:
+                    <select name="line__type">
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                    </select>
+                </label>
+                <label> Колір лінії:
+                    <select name="color__line">
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="white">white</option>
+                    </select>
+                </label>
+                <input class="submit" name="createTB" type="button" value="Створити таблицю" class="other__button"> </form>
+                </div>
+<!--                list__create - Тип маркування -->
+           <div class="list__create_box" style="display:none">
+            <form name="list__create">
+                <label> Введіть кіслькість елементів у списку:
+                    <input type="text" name="elements" value="" class="view__input"> </label>
+                <div class="list__retreat">
+                <label> Тип маркування:
+                    <select name="type__list">
+                        <option value="circle">circle</option>
+                        <option value="disc">disc</option>
+                        <option value="square">square</option>
+                        <option value="decimal">decimal</option>
+                    </select>
+                </label>
+                </div>
+                <input class="button" name="createList" type="button" value="Створити списoк" class="buttons">
+            </form>
+            </div>
+        </section>
+        <!--     !!!!    BOX THIRD--END  -->
+	</main>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

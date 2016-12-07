@@ -1,0 +1,132 @@
+body{
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/*------------------CONTAINER BLOCK------------------------------*/
+.container{	
+	margin: 1%;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+}
+/*------------------CONTAINER BLOCK END--------------------------
+*/
+
+/*-----------------SHOW BLOCK--------------------------------*/
+.show__article{
+	margin: 1%;
+}
+
+/*-----------------SHOW BLOCK END----------------------------*/
+
+
+/*-----------------OPERATE BLOCK-----------------------------*/
+.operate{
+	margin: 1%;
+	background:rgba(47,169,161,0.6);
+	height: 50px;
+	border: 5px inset #F5E378;
+    border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*-----------------OPERATE BLOCK END-------------------------*/
+
+
+/*-----------------EDIT BLOCK--------------------------------*/
+/*-----------------if EDIT button pressed-----------------------*/
+.edit{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.edit__article{
+	display: none;
+}
+
+.form__textarea{
+	margin: 1% 2%;
+	width: 95%;
+	height: 150px;
+	border-radius: 10px;
+}
+.edit__btns{
+	margin-left: 2%;
+}
+/*-----------------if STYLE button pressed-----------------------*/
+.edit__article_style{
+	margin: 0 auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+}
+.style__text{
+	margin: 1%;
+	width: 50%;
+	background: gray;
+}
+
+.style__headset, .style__color , .style__typeface, .style__text  {
+	margin-top: 10px;
+}
+
+.style__headset select{
+	border-radius: 10px;
+}
+/*-----------------if ADD button pressed-----------------------*/
+.edit__article_add{
+	margin: 1%;
+	width: 97%;
+    border: 5px outset #F5E378;
+    background:rgba(47,169,161,0.6);
+    border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+}
+
+
+/*-----------------EDIT BLOCK END----------------------------*/
+/*-----------------COMMON CLASSESS--------------------------------*/
+.edit_show{
+	margin: 1%;
+	background:rgba(47,169,161,0.6);
+	height: 235px;
+	border: 5px inset #F5E378;
+    border-radius: 20px;
+	overflow-y: auto;
+}
+
+.buttons{
+	 background: linear-gradient(to top, #593A30, #CA624B, #C683CA);
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 4px #00CD90;
+    font-size: 15px;
+    font-weight: 600;
+}
+/*-----------------COMMON CLASSESS END----------------------------*/
+
+/*-------------for DOM dynamicaly created elements----------------*/
+/*color table*/
+.table {
+		margin: 0 auto;
+		border: 1px solid black;
+		width: 158px;
+		height: 155px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.table__item {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+	}
