@@ -1,0 +1,325 @@
+body {
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/*------------------CONTAINER BLOCK------------------------------*/
+
+.container {
+	margin: 1%;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/*------------------CONTAINER BLOCK END--------------------------
+*/
+
+
+/*-----------------SHOW BLOCK--------------------------------*/
+
+.show__article {
+	margin: 1%;
+	padding-left: 20px;
+}
+
+
+/*-----------------SHOW BLOCK END----------------------------*/
+
+
+/*-----------------OPERATE BLOCK-----------------------------*/
+
+.operate {
+	margin: 50px 1%;
+	background: rgba(47, 169, 161, 0.6);
+	height: 50px;
+	border: 5px inset #F5E378;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*-----------------OPERATE BLOCK END-------------------------*/
+
+
+/*-----------------EDIT BLOCK--------------------------------*/
+
+
+/*-----------------if EDIT button pressed-----------------------*/
+
+.edit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.edit__article {
+	display: none;
+}
+
+.form__textarea {
+	margin: 1% 2%;
+	width: 95%;
+	height: 150px;
+	border-radius: 10px;
+}
+
+.edit__btns {
+	margin-left: 2%;
+}
+
+
+/*-----------------if STYLE button pressed-----------------------*/
+
+.edit__article_style {
+	margin: 0 auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+	position: relative;
+}
+
+.style__text {
+	margin: 1%;
+	width: 50%;
+}
+
+.style__headset,
+.style__color,
+.style__typeface,
+.style__text {
+	margin-top: 10px;
+}
+
+.style__headset select {
+	border-radius: 10px;
+}
+
+
+/*-----------------if ADD button pressed-----------------------*/
+
+.add {
+	margin: 1%;
+	width: 97%;
+	padding-top: 2%;
+	border: 5px outset #F5E378;
+	background: rgba(47, 169, 161, 0.6);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+	height: 550px;
+}
+.wrapper__typeLbeling_numb, 
+.wrapper__type_labeling,.box__list__items, .type__labeling__numb, .species__list {
+    display: none;
+     margin-bottom: 20px;
+}
+.form__retreat_rows,
+.form__retreat,
+.form__input,
+.table__title,
+view__input {
+	margin-bottom: 20px;
+}
+.wrraper__species_list{
+    margin-bottom: 20px;
+}
+.list__create {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+select {
+	border: 1px solid black;
+	border-radius: 10px;
+	background: #E6AC5D;
+}
+
+.view__input {
+	width: 40px;
+	border-radius: 10px;
+	box-shadow: 0 2px 3px #141B24;
+	text-align: center;
+}
+
+.form__input {
+	margin-top: 20px;
+}
+
+.table__title {
+	margin-top: 40px;
+}
+
+.submit {
+	margin-top: 60px;
+}
+
+.list__retreat {
+	margin-top: 30px;
+}
+
+.forms__view_text,
+.add {
+	color: floralwhite;
+	text-shadow: 0 1px 3px #141B24;
+}
+
+.table__create_box {
+	margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.add_back_button {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+
+.add_h1 {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	margin: 20px 0;
+	color: #F5E378;
+}
+.add__figure{
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+}
+.add__table{
+	background-image: url(../img/img_table.jpg);
+	left: 5%;
+	top: 30%;
+}
+.add__list{
+	background-image: url(../img/img_list.jpg);
+	left: 75%;
+	top: 30%;
+	display: none;
+}
+
+.error{
+    color: red;
+    font-weight: 700;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+}
+/*-----------------EDIT BLOCK END----------------------------*/
+
+
+/*-----------------COMMON CLASSESS--------------------------------*/
+
+.edit_show {
+	margin: 1%;
+	background: rgba(47, 169, 161, 0.6);
+	height: 235px;
+	border: 5px inset #F5E378;
+	border-radius: 20px;
+	overflow-y: auto;
+}
+
+.buttons {
+	background: linear-gradient(to top, #593A30, #CA624B, #C683CA);
+	margin-left: 5px;
+	width: 100px;
+	height: 30px;
+	border-radius: 30px;
+	box-shadow: 0 5px 4px #00CD90;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+
+/*-----------------COMMON CLASSESS END----------------------------*/
+
+
+/*-------------for DOM dynamicaly created elements----------------*/
+
+
+/*color table*/
+
+.table {
+	margin: 0 auto;
+	width: 200px;
+	height: 155px;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	left: 75%;
+	margin-left: 10px;
+}
+
+.table__item {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+
+/*---------------BLOCK PART------------------------*/
+
+
+/*bloced page*/
+
+.pop__up {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(169, 169, 169, 0.5);
+}
+
+.form__pop__up {
+    width: 600px;
+    height: 200px;
+    margin: 300px auto 0;
+    background: rgba(14, 67, 97, 0.8);
+    border: 5px inset #F5E378;
+    border-radius: 20px;
+    color: floralwhite;
+    font-size: 20px;
+    position: relative;
+}
+
+.wrapper__formPopUp {
+    margin-top: 80px;
+    margin-left: 90px;
+}
+
+.view__pass {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px #141B24;
+}
+
+.un__butt {
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 3px #141B24;
+    font-weight: 600;
+    text-shadow: 0 1px 1px #141B24;
+}
+
+.un__butt:hover {
+    box-shadow: 0 0 3em #871D08;
+}
+
+
+/*bloced page ends*/

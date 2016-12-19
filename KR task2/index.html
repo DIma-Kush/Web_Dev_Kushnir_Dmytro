@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KR task2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--	<link rel="stylesheet" href="css/reset_style.css"> -->
+    <link rel="stylesheet" href="css/animate.css"> </head>
+<body>
+  
+    <main class="container">
+        <!--         SHOW TEXT     -->
+        <section class="edit_show show animated fadeIn ">
+            <article class="show__article">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sed aperiam aut quasi voluptatibus, quas, doloribus maxime error odit enim.</p>
+            </article>
+        </section>
+        <!--         SHOW TEXT END     -->
+        <!--         OPERATE TEXT      -->
+        <section class="operate animated fadeIn ">
+            <form action="#" name="operate">
+                <input type="button" class="buttons" value="edit" name="editBtn">
+                <input type="button" class="buttons" value="style" name="styleBtn">
+                <input type="button" class="buttons butt__pop__up" value="block" name="buttPopUp"> </form>
+        </section>
+        <!--         OPERATE TEXT END     -->
+        <!--         EDIT TEXT     -->
+        <section class="edit_show edit animated fadeIn ">
+            <article class="edit__article animated fadeIn ">
+                <form action="#" name="edit">
+                    <textarea class="form__textarea" name="textarea"></textarea>
+                    <div class="edit__btns">
+                        <input type="button" class="buttons" value="Save" name="saveBtn">
+                        <input type="button" class="buttons" value="Add" name="addBtn"> </div>
+                </form>
+            </article>
+            <article class="edit__article_style animated fadeIn " id="hi">
+                <!--         SIZE TEXT     -->
+                <form name="radio" class="style__text"> Text size:
+                    <label>
+                        <input type="radio" name="text__radio" value="12pt">12px</label>
+                    <label>
+                        <input type="radio" name="text__radio" value="14pt">14px</label>
+                    <label>
+                        <input type="radio" name="text__radio" value="16pt">16px</label>
+                    <label>
+                        <input type="radio" name="text__radio" value="18pt">18px</label>
+                    <label>
+                        <input type="radio" name="text__radio" value="20pt">20px</label>
+                </form>
+                <!--          SIZE TEXT END     -->
+                <!--               HEADSET  -->
+                <form name="fontFamily" class="style__headset"> Font family:
+                    <select>
+                        <option selected value="Times New Roman">Times New Roman</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                </form>
+                <!--         HEADSET --END -->
+                <!--                COLOR TEXT AND BG-->
+                <form name="color" class='style__color'>
+                    <input type="button" value="Text color" name="colorBtn" class="buttons" id="btnClr">
+                    <input type="button" value="Bg color" name="bgBtn" class="buttons" id="btnBg"> </form>
+                <!--         COLOR TEXT AND BG END -->
+                <!--           Typeface text Накреслення-->
+                <form name="typeface" class="style__typeface">
+                    <label>
+                        <input type="checkbox" name="bolt"> Bolt</label>
+                    <label>
+                        <input type="checkbox" name="italic"> Cursive</label>
+                    <label>
+                        <input type="checkbox" name="underline"> Underline</label>
+                </form>
+                <!--     Typeface text Накреслення END-->
+            </article>
+        </section>
+        <!--         EDIT TEXT END     -->
+        <!--    SECTION ADD LIST TABLE  -->
+        <section class="add animated fadeIn">
+            <figure class="add__figure add__table animated fadeInLeft"></figure>
+            <figure class="add__figure add__list animated fadeInRight"></figure>
+            <form name="form__choice" class="form__retreat">
+                <h1 class="add_h1">Select your option:</h1>
+                <label>
+                    <input type="radio" checked name="choice" value="table" class="table__choice"> Table </label>
+                <label>
+                    <input type="radio" name="choice" value="list" class="list__choice"> List </label>
+            </form>
+            <!--         TABLE CREATE  -->
+            <article class="table__create_box animated fadeIn ">
+                <form name="table__create">
+                    <div class="form__retreat_rows">
+                        <label> Enter number of rows:
+                            <input type="text" name="rows" class="view__input validate"> <span class="error"> Enter value from 1 to 99 </span> </label>
+                    </div>
+                    <label> Enter number of columns:
+                        <input type="text" name="colums" class="view__input validate"> <span class="error"> Enter value from 1 to 99 </span></label>
+                    <h1 class="add_h1">Stylize the table:</h1>
+                    <label> Width of table cell:
+                        <input type="text" name="cell__width" class="view__input validate"> <span class="error"> Enter value from 1 to 99 </span> </label>
+                    <div class="form__input">
+                        <label> Hight of table cell:
+                            <input type="text" name="cell__heigth" class="view__input validate"> <span class="error"> Enter value from 1 to 99 </span> </label>
+                    </div>
+                    <div class="form__input">
+                        <label> Width:
+                            <input type="text" name="width" class="view__input validate"> <span class="error"> Enter value from 1 to 99 </span> </label>
+                    </div>
+                    <div class="form__input">
+                        <label> Line type:
+                            <select name="line__type">
+                                <option value="solid">solid</option>
+                                <option value="dotted">dotted</option>
+                                <option value="dashed">dashed</option>
+                                <option value="double">double</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form__input">
+                        <label> Line color:
+                            <select name="color__line">
+                                <option value="black">black</option>
+                                <option value="red">red</option>
+                                <option value="white">white</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="add_back_button">
+                        <input name="createTbTable" type="button" value="Create" class="buttons button_add">
+                        <input name="backTB" type="button" value="Back" class="buttons button_back"> </div>
+                </form>
+            </article>
+            <!--         LIST CREATE -->
+            <!--          НЕВИДИМИЙ по замовчуванню-->
+            <article class="list__create_box animated fadeIn " style="display:none">
+                <form name="list__create" class="list__create">
+                    
+            <div class="wrraper__species_list">
+             <span class="species__list">Вид списку:</span>
+               <label>
+                   <input type="radio" name="numbered" value="ol">Нумерований
+                </label>
+                <label>
+                    <input type="radio" name="bulleted" value="ul">Маркований
+                </label>
+                </div>
+                
+                <div class="wrapper__type_labeling">
+                <span class="type__labeling">Тип маркування списку:</span>
+                <select name="typeMarking" class="type__marking">
+                    <option value="circle">circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+                </div>
+                
+                <div class="wrapper__typeLbeling_numb">
+                <span class="type__labeling__numb">Тип маркування списку:</span>
+                <select name="typeMarkingNum" class="type__marking__numb">
+                    <option value="1">Арабські числа</option>
+                    <option value="a">Латинський алфавіт</option>
+                    <option value="I">Римські числа</option>
+                </select>
+                </div>
+                
+                <div class="box__list__items">
+                    <label>Введіть кількість елементів у списку:
+                        <input type="text" class="view__input validate" name="elements">     <span class="error">*Введіть цифри від 1 до 99</span>
+                    </label> 
+                </div>
+                <div class="add_back_button">
+						<input name="createTbList" type="button" value="Create" class="buttons button_add">
+						<input name="backTB" type="button" value="Back" class="button_back buttons "> </div> 
+                    
+                </form>
+            </article>
+        </section>
+        <!-- SECTION ADD LIST TABLE END  -->
+         <!--   block panel -- POPUP-->
+   <div class="pop__up">
+       <form name="formPopUp" class="form__pop__up">
+         <div class="wrapper__formPopUp">
+          <label>Enter pass:
+            <input type="password" name="passPopUp" class="view__pass">
+          </label>
+          <label>
+            <input type="button" class="buttons"  value="Unlock" name="unButtPopUp">
+          </label>
+              <div class="wrapper__pass" id="w">
+          <span class="pass__error ">Invalid password</span>
+              </div>
+          </div>
+       </form>
+   </div>
+<!--   block panel end-->
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
