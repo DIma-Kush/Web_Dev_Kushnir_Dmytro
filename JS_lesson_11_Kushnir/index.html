@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		display: flex;
+	}
+	
+	.task1_3 {
+		border: 2px solid black;
+		margin-right: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.task4 {
+		border: 2px solid black;
+		width: 800px;
+		height: 300px;
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.section__h2 {
+		color: red;
+		text-align: center;
+	}
+	.task_list{
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		padding: 0 40px;
+		height: 300px;
+	}
+	
+	.add_button {
+		margin: 20px;
+		text-align: center;
+	}
+	
+	.add_input {
+		text-align: center;
+		margin: 20px;
+	}
+</style>
+
+<body>
+	<main class="task1_3">
+		<p>TASK1</p>
+		<form action="#" name="form_checkbox">
+			<input type="checkbox">
+			<input type="checkbox">
+			<input type="checkbox">
+			<input type="checkbox">
+			<div>
+				<input type="button" name="button" value="checkAll"> </div>
+			<p>TASK2</p>
+		</form>
+		<!-------------------------->
+		<form action="#" name="radio">
+			<label class="label">
+				<input type="radio" name="r">text 1</label>
+			<label class="label">
+				<input type="radio" name="r">text 2</label>
+			<label class="label">
+				<input type="radio" name="r">text 3</label>
+			<label class="label">
+				<input type="radio" name="r">text 4</label>
+		</form>
+		<p>TASK3</p>
+		<!------------------------->
+		<form action="#" name="select">
+			<select name="list">
+				<option selected>text 1</option>
+				<option>text 2</option>
+				<option>text 3</option>
+				<option>text 4</option>
+				<option>text 5</option>
+				<option>text 6</option>
+			</select>
+			<input type="button" name="show" value="show">
+			  </form>
+	</main>
+	<main class="task4">
+		<section >
+		<form action="#" name="task_list" class="task_list">
+			<h2 class="section__h2">Список завдань</h2>
+			<label class='check'><input type="checkbox" checked>Купити смазку</label>
+			<label class='check'><input type="checkbox" checked>Купити смазку</label>
+			
+		</form>
+		</section>
+		<section >
+			<form action="#" name="reminder" class="task_add">
+				<h2 class="section__h2">Додати нове завдання</h2>
+				<div class="add_input">
+					<input type="text" name="add_task" class="add_task"> </div>
+				<div class="add_button">
+					<input type="button" name="add_button" value="додати"> </div>
+			</form>
+		</section>
+	</main>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

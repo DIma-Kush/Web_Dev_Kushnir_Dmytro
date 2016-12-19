@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .cenzor{
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 10px;
+        display: none;
+    }
+    .show{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .textarea{
+        margin-bottom: 20px;
+        height: 200px;
+    }
+    .forbidden{
+        color: red;
+        margin-bottom: 10px;
+    }
+    .autoriz{
+        display: flex;
+        flex-direction: column;
+    }
+    .autorization{
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 10px;
+        padding-top: 15px;
+        height: 200px;
+    }
+    .autoriz input{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .autoriz label{
+        text-align: center;
+    }
+    .errorLogin, .errorPass{
+        color: red;
+        margin-top: 0;   
+        height: 20px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+</style>
+<body>
+<main class="autorization">
+   <form action="#" name ="autoriz" class="autoriz" >
+      <label>Логін</label>
+       <input type="text">
+       <p class="errorLogin"></p>
+       <label>Пароль</label>
+       <input type="text">
+       <p class="errorPass"></p>
+       <input type="button" value="Ввійти">
+   </form>
+</main>
+<main class = "cenzor">
+    <h2>Список заборонених слів</h2>
+    <p class="forbidden"></p>
+    <form action="#" name ="add" class="add">
+        <input type="text">
+        <input type="button" value="Додати слово">
+    </form> 
+    <form action="#" name="show" class="show">
+        <textarea name="textarea" class="textarea"></textarea>
+        <input type="button" value="Цензор">
+    </form>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

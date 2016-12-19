@@ -1,0 +1,57 @@
+    .container{
+        margin: 5%;
+        border: 1px solid black;
+    }
+    .edit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .edit * {
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    .blocks{
+        display: flex;
+        margin-left: 40px;
+    }
+    .edit input{
+        width: 150px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .coord input{
+        width: 50px;
+    }
+    .coord label{
+        margin-right: 20px; 
+    }
+    
+    .block{
+        width: 50px;
+        height: 50px;
+        border: double 5px black;
+        margin: 5px;
+    }
+    .red{
+        background: red;
+    }
+    .green{
+        background: green;
+    }
+    .blue{
+        background: blue;
+    }
+    .div{
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: grey;
+        border: 1px solid black;
+        margin: 15px;
+        display: none;
+        position: absolute;
+    }
