@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .bounce {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid black;
+        position: absolute;
+        margin: 0 auto;
+        transform: rotate(320deg);
+    }
+</style>
+
+<body>
+    <p class="coord"></p>
+    <div class="bounce"></div>
+    <script src="libs/jquery-3.1.1.min.js"></script>
+    <script src="libs/jquery.color-2.1.2.min.js"></script>
+    <script>
+        $(function () {
+            // var currentPos ={x: -1, y: -1};
+            //  $("document").mousemove(function(e){
+            //    currentPos.x = e.pageX;
+            //     currentPos.y = e.pageY;
+            // $(".coord").text(`Mouse coordinates X: ${currentPos.x} Y: ${currentPos.y}`);
+            // });
+            var max = 200;
+            var min = -200;
+            $(".bounce").click(function () {
+               
+                    var bouncePosX = Math.floor($(".bounce").offset().top);
+                    var bouncePosY = Math.floor($(".bounce").offset().left);
+                    $(".coord").text(`Ball coordinates: X:${bouncePosX} Y:${bouncePosY}`);
+                    var randomDigit = Math.floor(Math.random() * (max - min + 1)) + min;
+                    var color = "#" + Math.random().toString(16).slice(2, 8);
+                    $(this).animate({
+                        top: `+=${randomDigit}`
+                        , left: `+=${randomDigit}`
+                        , borderRadius: Math.abs(Math.floor(Math.random() * (50 - 5 + 1)) + 5)
+                        , backgroundColor: color
+                        , width: Math.abs(Math.floor(Math.random() * (150 - 55 + 1)) + 55)
+                        , height: Math.abs(Math.floor(Math.random() * (250 - 55 + 1)) + 55)
+                    }, {
+                        duration: 1000,
+                        step: function(now){
+                            var scale = (2 *  now/359);
+                            $(".bounce").css({
+                               transform: 'rotate(' + now + 'deg) scale(' + scale + ')'
+                            });
+                        }
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

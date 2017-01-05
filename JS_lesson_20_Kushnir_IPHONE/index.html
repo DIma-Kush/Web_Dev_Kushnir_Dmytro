@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .phone {
+        background-image: url(img/iphone.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 600px;
+        height: 700px;
+        position: relative;
+    }
+    
+    .charge {
+        background-color: black;
+        position: absolute;
+        width: 43%;
+        height: 0px;
+        left: 168px;
+        top: 98px;
+        transform: rotate(180deg);
+        z-index: 2;
+    }
+    
+    .number {
+        position: absolute;
+        left: 300px;
+        top: 250px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        z-index: 3;
+    }
+    
+    .number * {
+        color: white;
+        font-style: italic;
+        font-family: verdana;
+    }
+    
+    .number h1 {
+        font-size: 50px;
+        margin: 5px;
+    }
+    
+    .basic {
+        background: green;
+        position: absolute;
+        width: 43%;
+        height: 460px;
+        left: 168px;
+        top: 98px;
+        transform: rotate(180deg);
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <figure class="phone">
+        <figure class="charge"></figure>
+        <figure class="basic"></figure>
+        <article class="number">
+            <h1>2</h1>
+            <h3>Minutes</h3> </article>
+    </figure>
+    <script src="libs/jquery-3.1.1.min.js"></script>
+    <script src="libs/jquery.color-2.1.2.min.js"></script>
+    <script>
+        $(function () {
+            $(".charge").animate({
+                height: '460px'
+            }, {
+                duration: 12000
+                , queue: false, // work simultaniously down
+                complete: function () {
+                    $(".number>h1").text("1");
+                    $(".number>h3").text("Minute");
+                    $(".charge").animate({
+                        height: '0px'
+                    }, {
+                        duration: 12000
+                        , queue: false, // work simultaniously up
+                    });
+                    $(".basic").animate({
+                        backgroundColor: 'green'
+                    , }, {
+                        duration: 12000
+                        , queue: false // work simultaniously up
+                    });
+                }
+            });
+            $(".basic").animate({
+                backgroundColor: '#85DBB0'
+            , }, {
+                duration: 12000
+                , queue: false // work simultaniously down
+            });
+        });
+    </script>
+</body>
+
+</html>

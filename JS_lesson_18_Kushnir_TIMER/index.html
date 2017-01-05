@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+<span class="timer">00:01:00</span>
+<form action="#" name="timer">
+<input type="button" value="Встановити">
+<input type="button" value="Старт">
+<input type="button" value="Пауза">
+</form>
+<script>
+function sel(a){
+    return document.querySelector(a);
+};
+
+
+    
+var intervalId;    
+var timeDuration = 60; // 1 minute by default
+function startTimer(duration, display) {
+    var timer = duration, seconds,minutes, hours;
+   intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        hours = parseInt(timer / 3600, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+        display.textContent = `${hours}:${minutes}:${seconds}`;
+       timeDuration = timer; // отримати поточний час
+        if (--timer <= 0) {
+            timer = duration;
+        }
+    }, 1000);
+};
+
+//window.onload = function () {
+//    var fiveMinutes = 60 * 5,
+//        display = sel('.timer');
+//    startTimer(fiveMinutes, display);
+//};
+
+var timer = document.forms.timer;
+    
+timer[0].addEventListener('click', function(){ // Встановити
+    clearInterval(intervalId);
+     timeDuration = prompt("Введіть значення в секундах",120);
+    startTimer(timeDuration, sel('.timer'));
+});
+timer[1].addEventListener('click', function(){ // Старт
+    clearInterval(intervalId);
+    startTimer(timeDuration,sel('.timer'));
+});
+timer[2].addEventListener('click', function(){ // Пауза
+    clearInterval(intervalId);
+});
+</script> 
+</body>
+</html>
+
+

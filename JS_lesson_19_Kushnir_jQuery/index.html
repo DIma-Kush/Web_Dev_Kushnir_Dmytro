@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+   .textarea{
+        height: 200px;
+        width: 400px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .create{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80%;
+        border: 1px solid black;
+    }
+    .notate{
+        width: 150px;
+        height: 150px;
+        background-color: chartreuse;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .cross{
+        position: absolute;
+        left: 120px;
+        top: 10px;
+    }
+</style>
+<body>
+     <textarea class="textarea"></textarea>
+     <input type="button" class="button" value="Створити повідомлення">
+<div class ="create">
+    <div class="notate">Hi
+    <img src="img/cross.PNG" alt="cross" class="cross">
+    </div>
+</div>
+ <script src="libs/jquery-3.1.1.min.js"></script>
+ <script>
+    $(function(){
+        $(".button").click(function(){
+            $(".create").append(`<div class="notate">${$(".textarea").val()}</div>`);
+            $(".notate").append(`<img src="img/cross.PNG" alt="cross" class="cross">`);
+            
+        });
+        $(document).on("click", ".cross", function(){
+           $(this).parent('.notate').remove(); 
+        });
+    });
+</script>
+</body>
+</html>
+
+
