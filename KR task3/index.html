@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS level 3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+
+   <main class="basic">
+
+        <header class="top__control ">
+
+            <section class="form__style">
+
+                <form action="#" name="styleText" class="style__text">
+                    <input type="button" value="Edit" name="edit">
+                    <input type="button" value="B" name="bold">
+                    <input type="button" value="/" name="italic">
+                    <input type="button" value="U" name="underline">
+                </form>
+
+                <form action="#" name="styleFont" class="style__font">
+                    <select name="fontSize" class="font__size">
+                        <option value="16px" name="px">16px</option>
+                        <option value="17px" name="px">17px</option>
+                        <option value="18px" name="px">18px</option>
+                        <option value="19px" name="px">19px</option>
+                        <option value="20px" name="px">20px</option>
+                        <option value="21px" name="px">21px</option>
+                        <option value="22px" name="px">22px</option>
+                        <option value="23px" name="px">23px</option>
+                    </select>
+                    <select name="fontFamily" class="font__famile">
+                        <option value="Courier New" name="f">Courier New</option>
+                        <option value="Arial" name="f">Arial</option>
+                        <option value="Georgia" name="f">Georgia</option>
+                        <option value="Lucida Console" name="f">Lucida Console</option>
+                        <option value="Times New Roman" name="f">Times New Roman</option>
+                        <option value="Verdana" name="f">Verdana</option>
+                        <option value="Tahoma" name="f">Tahoma</option>
+                        <option value="Impact" name="f">Impact</option>
+                    </select>
+                </form>
+
+                <form action="#" name="colBg" class="col__bg">
+                    <input type="button" value="Color" name="col" id="color">
+                    <input type="button" value="Bg" name="bg" id="bg">
+                </form>
+                
+                <div class="table__gray"></div>
+                
+                <article class="table__relativ">    
+                    <table id="table" class="txt__color">
+                       <form action="#" name="btnBgImage"> 
+                           <input type="button" value="Background image" name="bgImage" id="bg__images" class="bg__image">
+                       </form>
+                        <tr>
+                        <td style="background:#765185"></td>
+                        <td style="background:#00EEEE"></td>
+                        <td style="background:#EE00EE"></td>
+                    </tr>
+                    <tr>
+                        <td style="background:#839975"></td>
+                        <td style="background:#EEAD0E"></td>
+                        <td style="background:#2E323E"></td>
+                    </tr>
+                    <tr>
+                        <td style="background:#613942"></td>
+                        <td style="background:#436EEE"></td>
+                        <td style="background:#A9A9A9"></td>  
+                    </tr>
+                        
+                    </table>
+                </article>
+                
+<!--            !!!    Table 2 for img-->
+                <article class="table__image__relativ">
+                    <table id="table__img" class="bg__img">
+                        <form name="inputFile" class="input__file">
+                            <input type="button" id="bag__color" value="Background Color" name="backCol" class="back__col">
+                            <span class="dowload">Загрузити файл:</span>
+                            <input type="file" name="downloadFile" class="down__file">
+                        </form>
+                        <tr>
+                            <td style="background:url(img/1.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/2.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/3.jpg) no-repeat; background-size:cover;"></td>
+                        </tr>
+                        <tr>
+                            <td style="background:url(img/4.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/5.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/6.jpg) no-repeat; background-size:cover;"></td>
+                        </tr>
+                        <tr>
+                            <td style="background:url(img/7.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/8.jpg) no-repeat; background-size:cover;"></td>
+                            <td style="background:url(img/9.jpg) no-repeat; background-size:cover;"></td>
+                        </tr>
+                    </table>
+                </article>
+
+                <form action="#" name="align" class="align__cont ">
+                    <label>
+                        <input type="radio" name="r" checked value="left">left
+                    </label>
+                    <label>
+                        <input type="radio" name="r" value="center">center
+                    </label>
+                    <label>
+                        <input type="radio" name="r" value="right">right
+                    </label>
+                </form>
+
+            </section>
+
+        </header>
+    
+        <section class="content animated fadeInRight" id="cont">
+           
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>
+            </p>
+            
+        </section>
+        
+    </main>
+<!--    Dynamic show elements start-->
+    <div class="pop__up__table" ></div>
+    
+            <section class="table__form">
+
+            <form action="#" name="popUpTable" class="add__up__table">
+                <article class="add__up__table_L">
+                    <label>К-сть рядків:
+                        <input type="text" name="row" class="validate">
+                          <span class="error"> Enter value from 1 to 99 </span>
+                    </label>
+                    <label>К-сть стовбців:
+                        <input type="text" name="column" class="validate">
+                        <span class="error"> Enter value from 1 to 99 </span>
+                    </label>
+                    <label>Ширина:
+                        <input type="text" name="widthT" class="validate">
+                        <span class="error"> Enter value from 1 to 99 </span>
+                    </label>
+                    <label>Висота:
+                        <input type="text" name="heightT" class="validate">
+                        <span class="error"> Enter value from 1 to 99 </span>
+                    </label>
+
+                </article>
+                <article class="add__up__table_R">
+                    <label>Товщина рамки:
+                        <input type="text" name="borderW" class="validate">
+                        <span class="error"> Enter value from 1 to 99 </span>
+                    </label>
+                    <label>Колір рамки:
+                        <input type="text" name="borderCol">
+                    </label>
+                    <label>Cellspacing:
+                        <input type="text" name="spacing">
+                    </label>
+                    <input type="button" value="Очистити" name="clearTable" id="clear__table">
+                    <input type="button" value="Створити" name="addTable" id="add__table" class="button_add">
+                </article>
+            </form>
+
+        </section>
+    
+    <div class="pop__up__list"></div>
+    
+        <article class="list__form">
+
+        <form action="#" name="popUpList" class="add__up__list">
+            <label>Тип списку:
+                <input type="radio" name="r" id="r__list" checked>ol
+            </label>
+            <span>Тип маркування:</span>
+            <select name="typeMark">
+                <option value="A" name="typeM">A</option>
+                <option value="a" name="typeM">a</option>
+                <option value="I" name="typeM">I</option>
+                <option value="i" name="typeM">i</option>
+            </select>
+            <label>К-сть айтемів:
+                <input type="text" name="itemsList" class="validate">
+                 <span class="error"> Enter value from 1 to 99 </span>
+            </label>
+            <input type="button" value="Очистити" name="clearList" id="clear__list">
+            <input type="button" value="Створити" name="addList" id="add__list" class="button_add">
+        </form>
+
+    </article>
+    
+    <main class="added animated fadeIn">
+        
+        <article class="save__add">
+            
+            <form action="#" name="saveTableList" class="save__table__list">
+                <input type="button" value="Save" name="save">
+                <input type="button" value="Create table" name="createTable" class="create__table">
+                <input type="button" value="Create list" name="createList" class="create__list">
+            </form>
+            
+        </article>
+        
+        <article class="code">
+            
+            <form action="#" name="area" class="area">
+                <textarea name="textarea" cols="140" rows="40" class="textarea"></textarea>
+            </form>
+            
+        </article>
+        
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
