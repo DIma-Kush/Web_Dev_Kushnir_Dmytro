@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .discoBall {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: fixed;
+        border-radius: 50%;
+        -webkit-box-shadow: -1px 1px 12px 2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 1px 12px 2px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 1px 12px 2px rgba(0, 0, 0, 0.75);
+        border: 5px double red;
+    }
+    
+    body {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <!--    <canvas id="canvas"></canvas>-->
+    <div class="discoBall"></div>
+    <script src="libs/jquery-3.1.1.min.js"></script>
+    <script src="libs/jquery.color-2.1.2.min.js"></script>
+    <script src="libs/jquery.animate-shadow-min.js"></script>
+    <script>
+        $(function () {
+            animateDiv();
+        });
+
+        function makeNewPosition() {
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 100;
+            var w = $(window).width() - 100;
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            return [nh, nw];
+        }
+
+        function animateDiv() {
+            var color = "#" + Math.random().toString(16).slice(2, 8);
+            var color2 = "#" + Math.random().toString(16).slice(2, 8);
+            var color3 = "#" + Math.random().toString(16).slice(2, 8);
+            var newq = makeNewPosition();
+            $('.discoBall').animate({
+                top: newq[0]
+                , left: newq[1]
+            }, {
+                queue: false
+                , duration: 500,
+                complete:
+             function () {
+                animateDiv();
+             }
+            });
+            $(".discoBall").animate({
+                backgroundColor: color
+                , borderColor: `5px double ${color3}`
+                , boxShadow: `-1px 1px 12px 2px ${color2}`
+            }, {
+                queue: false
+                , duration:  200
+            });
+        };
+        //        var canvas = document.getElementById('canvas');
+        //         
+        //        canvas.width = window.innerWidth;
+        //        canvas.height = window.innerHeight;
+        //        console.log(window.innerWidth);
+        //        var x = canvas.width / 2; //initial position
+        //        var y = canvas.height / 2;
+        //        var cxt = canvas.getContext('2d');
+        //        cxt.fillStyle =  color; //color
+        //        var radius = 30;
+        //        var dx = 0;
+        //        var dy = 0;
+        //        var delta = 5; // range (from 0) of possible dx or dy change
+        //        var max = 15; // maximum dx or dy values
+        //        canvas.addEventListener("click", togglestart);
+        //
+        //        function togglestart() {
+        //            if (interval == undefined) interval = window.setInterval(animate, 1000 / 60); // 60 FPS
+        //            else {
+        //                interval = clearInterval(interval);
+        //                console.log(interval);
+        //            }
+        //        }
+        //        var interval = window.setInterval(animate, 1000 / 60);
+        //
+        //        function animate() {
+        //            var d2x = (Math.random() * delta - delta / 2); //change dx and dy by random value
+        //            var d2y = (Math.random() * delta - delta / 2);
+        //            if (Math.abs(d2x + dx) > max) // start slowing down if going too fast
+        //                d2x *= -1;
+        //            if (Math.abs(d2y + dy) > max) d2y *= -1;
+        //            dx += d2x;
+        //            dy += d2y;
+        //            if ((x + dx) < 0 || (x + dx) > canvas.width) // bounce off walls
+        //                dx *= -1;
+        //            if ((y + dy) < 0 || (y + dy) > canvas.height) dy *= -1;
+        //            x += dx;
+        //            y += dy;
+        //            cxt.beginPath(); //drawing circle
+        //            cxt.arc(x, y, radius, 0, 2 * Math.PI, false);
+        //            cxt.clearRect(0, 0, canvas.width, canvas.height); // wiping canvas
+        //            cxt.fill();
+        //        }
+        //       
+        //        $(function () {
+        //            $("#canvas").animate({
+        //                backgroundColor: color
+        //            }, 1000);
+        //        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.css"> </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100%;
+    }
+    #container{
+        background-color: beige;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_arrow,
+    .right_arrow {
+        width: 50px;
+        height: 50px;
+        background: white;
+        box-shadow: 0 2px 2px black;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        z-index: 4;
+    }
+    
+    .left_arrow {
+        top: 210px;
+        left: 20px;
+    }
+    
+    .right_arrow {
+        top: 210px;
+        right: 20px;
+    }
+    
+    .left_arrow::after,
+    .right_arrow::after {
+        content: '';
+        height: 16px;
+        width: 0;
+        position: absolute;
+        padding: 2px 10px;
+        border: 3px solid black;
+        border-top: transparent;
+        border-right: transparent;
+        cursor: pointer;
+    }
+    
+    .left_arrow::after {
+        content: '';
+        top: 14px;
+        left: 17px;
+        transform: rotate(45deg);
+    }
+    
+    .right_arrow::after {
+        content: '';
+        top: 14px;
+        right: 17px;
+        transform: rotate(225deg);
+    }
+    
+    .paragraph {
+        width: 200px;
+        padding: 5px;
+    }
+    
+    .Microsoft {
+        position: fixed;
+        z-index: 1;
+    }
+    
+    .Apple {
+        position: fixed;
+        z-index: 2;
+    }
+    
+    .Windows {
+        position: fixed;
+        z-index: 3;
+    }
+    
+    .article {
+        height: 500px;
+        width: 400px;
+        display: none;
+    }
+    
+    .figure {
+        width: 250px;
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 1px;
+    }
+    
+    .Apple__img {
+        background-image: url(img/apple.jpg);
+    }
+    
+    .Microsoft__img {
+        background-image: url(img/microsoft.jpg);
+    }
+    
+    .Windows__img {
+        background-image: url(img/google.jpg);
+    }
+    .article p{
+         box-sizing: border-box;
+        padding: 5px;
+        width: 350px;
+        height: 200px;
+    }
+</style>
+
+<body>
+        <div id="container">
+        <article class="article Microsoft">
+            <figure class="figure Microsoft__img"></figure>
+            <p> Microsoft - багатонаціональна корпорація комп'ютерних технологій із всесвітнім продажем в 39 790 млн долл. США (2005) і 71 553 працівниками в 102 країнах (липень 2006) є найбільшою у світі компанією — виробником програмного забезпечення.Найпопулярнішими продуктами корпорації є операційні системи «Microsoft Windows» і офісний пакет «Microsoft Office». Майкрософт володіє значними компаніями в інших частинах ринку, як кабельна телевізійна мережа MSNBC, інтернет-портал MSN і мультимедійна енциклопедія Майкрософт «Encarta». 
+             </p>
+        </article>
+        <article class="article Apple">
+            <figure class="figure Apple__img"></figure>
+            <p> Apple американська технологічна компанія з офісом у Купертіно, Каліфорнія яка проектує та розробляє побутову електроніку, програмне забезпечення та онлайн-сервіси. До пристроїв, що розробляються компанію належать смартфон iPhone, планшет iPad, персональний комп'ютер Mac, портативний медіа-плеєр iPod і розумний годинник Apple Watch. Розроблене компанією програмне забезпечення включає операційні системи OS X та iOS, медіа-плеєр iTunes, веб-браузер Safari та застосунки iLife та iWork. До онлайн сервісів належать iTunes Store, iOS App Store, Mac App Store та iCloud. </p>
+        </article>
+        <article class="article Windows">
+            <figure class="figure Windows__img"></figure>
+            <p > Google - американська публічна транснаціональна корпорація, яку заснували 1998 року аспіранти Стенфордського університету Ларрі Пейдж і Сергій Брін. Найпопулярніший пошуковий сервіс станом на 2016 рік, має у власності, зокрема YouTube і Blogger. Google.com — найвідвідуваніший сайт у світі (поряд із facebook.com). Водночас, компанію звинувачують у цензурі та упередженому й ненейтральному висвітленні результатів пошукових запитів. </p>
+        </article>
+        <div class="left_arrow"></div>     
+        <div class="right_arrow"></div>
+        </div>
+    <script src="libs/jquery-3.1.1.min.js"></script>
+    <script src="libs/jquery.color-2.1.2.min.js"></script>
+    <script src="libs/jquery.animate-shadow-min.js"></script>
+    <script>
+        $(function () {
+             var counter = 0;
+             var selectors = $("body").find(".article");
+            function sliding(animation){
+                  if(counter <= selectors.length-1)
+                    {
+                    switch(counter){
+                        case 0: 
+                        $(".article").eq(counter).css({display: "block"});
+                        $(".article").eq(counter+1).css({display: "none"});
+                        $(".article").eq(counter+2).css({display: "none"});
+                            
+                        $(".article").eq(counter).toggleClass(`animated ${animation}`);
+                        $(".article").eq(counter+1).removeClass(`animated fadeInRight fadeInLeft`);
+                        $(".article").eq(counter+2).removeClass(`animated fadeInRight fadeInLeft`);
+                        break;    
+                        case 1: 
+                        $(".article").eq(counter).css({display: "block"});
+                        $(".article").eq(counter-1).css({display: "none"});
+                        $(".article").eq(counter+1).css({display: "none"});
+                        
+                        $(".article").eq(counter).toggleClass(`animated ${animation}`);
+                        $(".article").eq(counter-1).removeClass(`animated fadeInRight fadeInLeft`);
+                        $(".article").eq(counter+1).removeClass(`animated fadeInRight fadeInLeft`);
+                        break;
+                        case 2: 
+                        $(".article").eq(counter).css({display: "block"});
+                        $(".article").eq(counter-2).css({display: "none"});
+                        $(".article").eq(counter-1).css({display: "none"});
+                        
+                        $(".article").eq(counter).toggleClass(`animated ${animation}`);
+                        $(".article").eq(counter-2).removeClass(`animated fadeInRight fadeInLeft`);
+                        $(".article").eq(counter-1).removeClass(`animated fadeInRight fadeInLeft`);
+                        counter = -1;
+                        break;
+                        default:
+                            alert("something went wrong!");
+                            break;   
+                    }
+                         counter++;
+                    
+                    }
+            }
+            
+                $(".left_arrow").click(function () {
+                    sliding("fadeInRight");
+                }); 
+                $(".right_arrow").click(function () {
+                    sliding("fadeInLeft");
+                }); 
+            
+            
+            
+//            $(".article").each(function (index, element) {
+//                $(".left_arrow").click(function () {
+//                    //console.log(index);
+//                    $(element).eq(index).css({display: "block"});
+//                    $(element).eq(index).toggleClass("animated fadeInRight");
+//                      
+//                    // document.querySelector(".Apple").style.display = "block";
+//                    // document.querySelector(".Windows").style.display = "block";
+//                });
+//                $(".right_arrow").click(function () {
+//                //  document.querySelector(".Microsoft").style.display = "block";
+//                //    $(".Microsoft").toggleClass("animated fadeInLeft");
+//                });
+          //  });
+        });
+    </script>
+</body>
+
+</html>   
