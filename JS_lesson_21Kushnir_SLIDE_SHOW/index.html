@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/animate.css"> </head>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/unslider-dots.css">
+    <link rel="stylesheet" href="css/unslider.css">
+     </head>
 <style>
     *{
         margin: 0;
@@ -155,8 +158,10 @@
              var selectors = $("body").find(".article");
             function sliding(animation){
                   if(counter <= selectors.length-1)
-                    {
+                    
+                    { console.log("in switch " + counter);
                     switch(counter){
+                             
                         case 0: 
                         $(".article").eq(counter).css({display: "block"});
                         $(".article").eq(counter+1).css({display: "none"});
@@ -183,15 +188,21 @@
                         $(".article").eq(counter).toggleClass(`animated ${animation}`);
                         $(".article").eq(counter-2).removeClass(`animated fadeInRight fadeInLeft`);
                         $(".article").eq(counter-1).removeClass(`animated fadeInRight fadeInLeft`);
-                        counter = -1;
                         break;
                         default:
                             alert("something went wrong!");
                             break;   
                     }
-                         counter++;
-                    
-                    }
+                       if(animation == "fadeInLeft"){ // left
+                         ++counter;
+                        if(counter > selectors.length-1) counter = 0;
+                       }
+                        
+                       if(animation == "fadeInRight"){   // right
+                         counter--;
+                        if(counter < 0) counter = selectors.length-1;
+                        }
+                }
             }
             
                 $(".left_arrow").click(function () {
