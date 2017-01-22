@@ -1,0 +1,102 @@
+/*------container--------*/
+#container{
+        background-color: beige;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+}
+/*------container END--------*/
+/*-----------------TABLE and Cells----------*/
+.table{
+    width: 490px;
+    height: 500px;
+    margin: 35px auto;
+    z-index: 2;
+    border-radius: 20px;   
+}
+.row{
+    margin-left: 6px;
+    margin-top: 5px;
+    display: flex;
+}
+.cell{
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: rgb(128, 128, 128);
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    opacity: 0.8;
+}
+.cell:hover{
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+/*-------------button----------------*/
+.button{
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    background: #4B8BFA;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.button:hover{
+    background: #4B1BFA;
+}
+
+/*------------PLAYER images-------------*/
+.worm{
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+     width: 300px;
+    height: 300px;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+.wormRed{
+    top: 10%;
+    height: 460px;
+    left: 74%;
+   background-image: url(../img/wormRed.png);
+}
+.wormGreen{
+   top:15%;
+   left: 2%;
+    background-image: url(../img/wormGreen.png);
+}
+.turnRed, .turnGreen{
+    position: absolute;
+    font-family: cursive;
+}
+.turnRed{
+    top: 95%;
+    left:25%;
+    color: red;
+}
+.turnGreen{
+    top:105%;
+    left: 20%;
+    color: green;
+}
+/*------------PLAYER images END-------------*/
+
+/*----------RESULT and SHADOW-------------*/
+.result{
+    display: none;
+    position: absolute;
+    left: 36.5%;
+    top:35%;
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    border-radius: 5px;
+
+}

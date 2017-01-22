@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>'Document'</title>
+</head>
+
+<body>
+    <script>
+        //    var a = "hello world";
+        //
+    </script> //
+    <!-- <script>
+//    function f(){
+//        // <-
+//        var b = 1;
+//        function f2(){
+//            // lexical environment
+//            var c = 2;
+//            console.log(a);
+//        }
+//    }
+//    // 
+//    // f[[scope]] = window
+//    // f2 [[scope]] == f [[lexicalEnvironment]]
+//    // Тобто ама змінна спершу шукається нижче потім вище і ще вище
+//</script> -->
+    <script>
+        //    var myMod = {
+        //        counter: 0,
+        //        getCount: function(){
+        //            return this.counter;
+        //        },
+        //        initCount: function(){
+        //            this.counter++;
+        //        }
+        //    };
+        //    
+        ////    console.log(myMod.getCount()); // 0
+        ////    myMod.initCount();
+        ////    myMod.initCount();
+        ////    myMod.initCount();
+        ////    myMod.initCount();
+        ////    myMod.initCount();
+        ////    console.log(myMod.getCount()); // 5
+        ////    
+        ////    myMod.counter = 10;
+        ////    myMod.initCount();
+        ////    myMod.initCount();
+        ////    console.log(myMod.getCount()); // 12 ПОГАНО юзер все спортив
+        //    
+        //    // IEEF 
+        //
+        ////    
+        ////    
+        ////    var myMod2 = (function(){
+        ////        var counter = 0;
+        ////        return { // любий модуль це обєкт
+        ////            getCount: function(){
+        ////                return counter;
+        ////            },
+        ////            initCount: function(){
+        ////                counter++;
+        ////            }
+        ////        }
+        ////    })(); // anonyme func
+        ////    
+        ////    console.log(myMod2.getCount());
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        //////    myMod2.counter = 10; // UNDEFINED вона схована
+        ////    console.log(myMod2.getCount());
+        ////    
+        ////    
+        //    
+        //    //////////////
+        ////    
+        ////    function f (){
+        ////        var a = 0;
+        ////        console.log(a);
+        ////    }
+        ////    f(); // lexicalEnvironment ==>  i = 0 , c.l(i) 
+        ////    //  i затерлася ( спрацював garbage collection)
+        ////    // Важлива привязка до області видимлсті щоб не затерлася
+        //    
+        //        var publicVar = 100; // імпортуємо це значення ..... В інакшому скріпті також буде працювати
+        //    var myMod2 = (function(public){
+        //        var counter = public != undefined ? public : 0;
+        //        
+        //        // так зробили в бібліотеці Lodash
+        //        var obj = {
+        //            getCount: function(){
+        //                return counter;
+        //            },
+        //            initCount: function(){
+        //                counter++;
+        //            }
+        //        }
+        //        
+        //          window._ = obj;
+        //        /// ну або так
+        //        
+        ////        return { // любий модуль це обєкт
+        ////            getCount: function(){
+        ////                return counter;
+        ////            },
+        ////            initCount: function(){
+        ////                counter++;
+        ////            }
+        ////        }
+        //    })(publicVar); // anonyme func
+        ////    
+        ////    console.log(myMod2.getCount());
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.initCount();
+        ////    myMod2.counter = 10; // UNDEFINED вона схована   
+        //     
+        //    console.log(_.getCount());
+        //    _.initCount();
+        //    _.initCount();
+        //    _.initCount();
+        //    _.initCount();
+        //    _.initCount();
+        //     console.log(_.getCount());
+        //    
+        //    
+        //    //ГЕТЕРИ СЕТТЕРИ функціональне наслідування робиться через конструктор!////////////////////////////
+        //    function User(name, id){
+        //        
+        //        this.name = name;
+        //        this.id = id;
+        //      //  this.getname = function(){
+        //        // Те саме що нижче    
+        //    //    }
+        //        
+        // 
+        //    }
+        //    
+        //  //        Object.defineProperty(this, "getName", { // this -> petya 
+        ////            value: function(){
+        ////                return this.name;
+        ////            }
+        ////        });
+        //     // console.log(petya.getName, petya);
+        //    
+        //    
+        //    
+        //    var petya = new User("Petya", "00");
+        //    console.log(petya);
+        //    
+        //              Object.defineProperty(petya, "getName", {
+        //                  //value: function(){
+        //                    //  return this.name;
+        //                  //},
+        //                 // writable: true, // дескриптори. bool. true -> можна поміняти код. Інакше - ні . По замовчуванню тут false . ТУТ ВІД НЬОГО ТОЛКУ НЕМА МОЖНА ЗАБРАТИ
+        //                  enumerable: true, // показує властивості в циклі for in . true -> покажуться властивості getOnProperty
+        //                  configurable: true, // чи можна буде міняти налаштування в подальшому 
+        //                  get: function(){ // для прихованої реалізації
+        //                      return this.name;
+        //                  },
+        //                  set: function(value){
+        //                      this.name = valu e;
+        //                  }
+        //              });
+        ////    for(var key in petya){
+        ////        console.log(key + ' ' + petya[key]); // якщо enumerable = false то не буде видно
+        ////    }
+        //    
+        //    console.log(petya.getName); //ГЕТЕРИ І СЕТЕРИ ВЕДУТЬ СЕБЕ ЯК ВЛАСТИВІСТЬ
+        //    petya.getName = 'vasya';
+        //        console.log(petya.getName);
+        ///////////////////////////////LESSON 2 ////////////////////////////////
+        // прототипне наслідування.  JS - прототипна мова програмування(підрозділ ООП)
+        //         var animal = {
+        //             eats: true
+        //         };
+        //        var rabbit = {
+        //            jumps: true
+        //        };
+        //        // .__proto__  всередині неї зберігається посилання на ф-цію конструктор за допомогою якої обєкт був створений
+        // СЕРЕДІ ПРОТО ЗБЕРІГАЄТЬСЯ ПОСИЛАННЯ НА ФУНКЦІЮ КОНСТРУКТОР
+        //        console.log(rabbit);
+        //        rabbit.__proto__ = animal;
+        //     console.log(rabbit.eats); // true - наслідування
+        //    
+        //        rabbit.eats = false;
+        //       console.log(rabbit.eats); 
+        //    //////////////////////////////////////
+        //    function User(name){
+        //        this.name = name;
+        //        this.speak = function(){
+        //            return "I'm" + this.name;
+        //        }
+        //        console.log("instance created");
+        //    }
+        //    
+        //    var petya = new User("Petya");
+        //    var vasya = new User("Vasya");
+        //    
+        //    console.log(petya.speak === vasya.speak); // перевіряємо чи сам ОБЄКТ однаковий для двох юзерів. FALSE. Бо і кожного обєкта своя копія. погано
+        ///////////////////////////////////////////
+        //    function User(name){
+        //        this.name = name;
+        //        console.log("instance created");
+        //    }
+        //    User.prototype.speak =  function(){
+        //        return "Hello " + this.name;
+        //    };
+        //    
+        //    
+        //    
+        //    console.log(User.prototype);
+        //    
+        //    var petya = new User.prototype.constructor("Petya");
+        //    var vasya = new User("Vasya");
+        //    
+        //    vasya.speak = function(){
+        //        return "I'm not inherited " + this.name ;
+        //    }
+        //     console.log(petya.speak(), vasya.speak());
+        //    console.log(petya.speak === vasya.speak);  // true . ТЕПЕР ВИКОРИСТОВУЮТЬ ТОЙ САМИЙ МЕТОД
+        /////////////////////////////////////////// СПРАВЖНЄ НАСЛІДУВАННЯ
+        //    
+        //    function User(name){
+        //        this.name = name;                          //-->  (3 ) -->
+        //       console.log("Запуск суперкласу");
+        //    }
+        //    User.prototype.speak =  function(){
+        //        return "Hello " + this.name;
+        //    };
+        //    
+        //    function Student(name, school){
+        //        User.call(this, name); // ніби ми викликали new User --> (2 ) -->
+        //        
+        //        this.school = school;                    // --> (4)
+        //         console.log("Запуск підкласу");
+        //        
+        //    }
+        //    
+        //    Student.prototype = Object.create(User.prototype); // також створює об"єкт але з одною ізюминкою - треба вказати прототип нашого обєкта
+        //    console.log(Student.prototype);
+        //  //  Student.prototype.constructor = Student; // треба йому також задати конструктор ручками
+        //    
+        //    
+        //    
+        //   // console.log(User.prototype);
+        //    
+        //    var petya = new Student("Petya", "#67"); // -> викликається констр. суперкласу   (1) --> 
+        //    var vasya = new Student("Vasya" , "23");
+        //    console.log(petya);
+        ////    vasya.speak = function(){
+        //        return "I'm not inherited " + this.name ;
+        //    }
+        //  console.log(petya.speak(), vasya.speak());
+        // console.log(petya.speak === vasya.speak);  // true . ТЕПЕР ВИКОРИСТОВУЮТЬ ТОЙ САМИЙ МЕТОД
+        //////////////////////////////////ЗАВДАННЯ 1 ///////////////////////////////////
+//        var User = (function () {
+//            var name = "";
+//            var age = 0;
+//            return {
+//                setName: function (n) {
+//                    return name = n;
+//                }
+//                , showName: function () {
+//                    document.write(`hello, ${name}.`);
+//                }
+//                , setAge: function (a) {
+//                   
+//                    return age = a;
+//                }
+//                , showAge: function () {
+//                    document.write(` You have ${age} years old`);
+//                }
+//            }
+//        })();
+//        User.setName("Dima");
+//        User.setAge(21);
+//        User.showName();
+//        User.showAge();
+        
+          //////////////////////////////////ЗАВДАННЯ 2 ///////////////////////////////////
+        
+        var People = (function (){
+            var peoples = ["Dima", "Vika", "Olja"];
+            
+        })();
+    </script>
+</body>
+
+</html>

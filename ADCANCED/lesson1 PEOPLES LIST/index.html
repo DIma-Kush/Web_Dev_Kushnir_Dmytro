@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1 PEOPLES</title>
+</head>
+   <style>
+       #container{
+           border: 2px solid black;
+           margin: 0 auto;
+           max-width: 500px;
+           min-height: 200px;
+           text-align: center;
+       }
+       ul{
+           text-align: left;
+           min-width: 50px;
+           margin-left: 100px;
+       }
+       .cross {
+           cursor: pointer;
+       }
+    </style>
+    <div id="container">
+        <h1>JS Pattern MODULE</h1>
+        <form name="input" class="form">
+            <input type="text" class="input" name="addField">
+            <input type="button" value="Add" class="button" name="addBtn">
+        </form>
+        <ul class="list">     
+        </ul>
+    </div>
+<body>
+   <script src="libs/jquery-3.1.1.min.js"></script>
+    <script>    
+          //////////////////////////////////ЗАВДАННЯ 2 ///////////////////////////////////
+        
+           $(function(){  
+//              $(document).on("click", ".cross", function(){
+//                   $(this).parent("li").remove(); 
+//                }); 
+//                $(".button").click(function(){
+//                   $(".ul").append('<li>'+ $(".input").val() +'<span class="cross">X</span></li>');
+//                });
+               
+               
+     (function (){
+            var people = {
+                people : ['Vika', 'Olja'],
+                 // export functions
+                init: function(){
+                    this.cacheDom();
+                    this.bindEvents();
+                    this.render();
+                },
+                cacheDom: function(){
+                    this.$el = $('#container');
+                    this.$input = this.$el.find('.input');
+                    this.$button = this.$el.find('.button');
+                    this.$ul = this.$el.find('.list');
+                },
+                bindEvents: function(){
+                    this.$button.on('click', this.addPerson.bind(this));// тут this потрібен, бо інакше бауде івент на слік а івент на клік немає методів peoples , render 
+                    this.$ul.delegate('span.cross', 'click', this.deletePerson.bind(this));// дозволяє проделегувати подію на всі обєкти  
+                },
+                render: function(){// одна з найголовніших функцій  оновлення сторінки
+                   this.$ul.html(''); // весь html з тега ul очишається там малюється знову
+                    var data = {// коли міняєш data , people мінятись не буде
+                        people: this.people // це хороша практика.
+                    };
+                    for(var i = 0; i < data.people.length; i++){
+                        this.$ul.append('<li>'+ data.people[i] +'<span class="cross">X</span></li>');
+                        console.log(data.people);
+                    }
+                },
+                addPerson: function(){
+                    console.log(this);
+                    this.people.push(this.$input.val());
+                    this.render();
+                    this.$input.val('');
+                },
+                deletePerson: function(e){
+                    var $remove = $(e.target).closest('li');
+                    var span = this.$ul.find('li').index($remove);
+                    this.people.splice(span,1);
+                    this.render();
+                }
+            };
+            people.init();
+
+        })();
+           
+            
+         });   
+    </script>
+</body>
+
+</html>
