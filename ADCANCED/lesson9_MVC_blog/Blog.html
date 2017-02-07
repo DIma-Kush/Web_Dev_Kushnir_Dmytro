@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css" > 
+    <link rel="stylesheet" href="src/css/bootstrap-theme.min.css" > 
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+<div class="container" ng-app="myApp" ng-controller="myCtrl as main" ng-cloak>
+    <div class="panel panel-default">
+        <div class="panel-body"><p>Hello, {{main.name}} {{main.time}}</p>  </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form role="form" id="avtoriz">
+                        <div class="form-group">
+                            <label>Login</label>
+                            <input type="login" class="form-control" id="login" placeholder="Enter login" ng-focus="main.mesWrong()">
+                        </div>
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-focus="main.mesWrong()">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-success" ng-click="main.ent()">Entery</button>
+                        <button type="submit" class="btn btn-warning">Forget password?</button>
+                        <div id="wrongPass" > Wrong password</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div>
+        <div class="form-group">
+            <label for="usr">Тема:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <form role="form">
+            <div class="form-group">
+                <label for="comment">Повідомлення:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <button type="button" class="btn btn-success post" ng-click="main.addPost()">Відправити</button>
+            </div>
+        </form>
+
+
+    </div>
+    <div class='posters' ng-repeat="x in main.model.postes">
+        <div>
+            <h2>{{x.theme}}</h2>
+            <h5><span class='glyphicon glyphicon-time'></span> Post by {{x.autor}}, {{x.date}}</h5>
+            <a class='label label-danger' ng-click="main.changeElement($index)">change</a>
+            <a class='label label-primary' id='remove' ng-click="main.deleteElement($index)">remove</a>
+        </div>
+        <br><br>
+        <p>{{x.descr}}</p>
+    </div>
+
+    <div class="modal fade" id="change" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label>Тема:</label>
+                            <input type="text" class="form-control" id="changeUsr" >
+                        </div>
+                        <div class="form-group">
+                            <label>Повідомлення:</label>
+                            <textarea class="form-control" rows="5" id="changeCom"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  ng-click="main.finishChange()">Change</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <script src="src/libs/angular/angular.min.js"></script>
+    <script src="src/libs/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/main_controller.js"></script>
+
+   
+
+</body>
+
+</html>

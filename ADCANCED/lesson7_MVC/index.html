@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TaskListApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="src/css/bootstrap.min.css" > 
+    <link rel="stylesheet" href="src/css/bootstrap-theme.min.css" > 
+    </head>
+  
+<body ng-controller="TaskListCtrl as main" ng-cloak>
+    <div class="container">
+        <div class="page-header">
+            <div class="page-header">
+                <h2>Plan your day!</h2> </div>
+            <div class="page-header">
+                <h3>User:{{main.tasklist.user}} Count of Task-{{main.tasklist.tasks.length}}</h3> </div>
+        </div>
+        <div class="panel">
+            <div class="input-group">
+                <input class="form-control" ng-model="main.TaskName"> <span class="input-group-btn">
+                   
+                    <button class="btn btn-default" ng-click="main.addNewTask()">Add</button>
+               </span> </div>
+            <table class="table table-hover">
+                <thread>
+                    <tr>
+                        <th>Delete</th>
+                        <th>Task</th>
+                        <th>Check</th>
+                        <th>DONE/IN PROGRESS</th>
+                        <th>Edit</th>
+                    </tr>
+                </thread>
+                <tbody ng-repeat="task in main.tasklist.tasks">
+                    <tr>
+                        <td>
+                            <button class="btn btn-danger" ng-click="main.deleteTask()">Delete</button>
+                        </td>
+                        <td>{{task.name}}</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" ng-model="task.checked"> </label>
+                        </td>
+                        <td><span style='{{main.setStyle(task.checked)}}'>{{main.showText(task.checked)}}</span></td>
+                        <td>
+                            <button ng-click="main.edit()" class="btn btn-primary">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="edit" style="display:none">
+            <div class="input-group">
+                <input class=" editInputform-control" ng-model="main.TaskName"> <span class="input-group-btn">
+                   
+                    <button class="btn btn-success" ng-click="main.editTask()">Change</button>
+                    <button class="btn btn-danger" ng-click="main.editClose()">Cancel</button>
+               </span> </div>
+        </div>
+    </div>
+      <script src="src/libs/angular/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/main_controller.js"></script>
+    <script src="src/libs/jQuery/jquery-3.1.1.min.js"></script>
+     <script src="src/js/bootstrap.min.js"></script>
+</body>
+
+</html>
